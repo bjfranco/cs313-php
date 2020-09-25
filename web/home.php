@@ -23,7 +23,7 @@
 		<div class="column">
 			<h1>Server Time</h1>
 			<?php
-			echo date();
+			echo "The time is " . date("h:i:sa");
 			?>
 		</div>
 	</div>
