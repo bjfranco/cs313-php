@@ -1,0 +1,43 @@
+.nav{
+	list-style-type: none;
+	background-color: #333;
+	display: flex;
+	padding: 2.5vw;
+	border-radius: 1.5vw;
+}
+
+.nav a{
+	color: white;
+	text-decoration: none;
+	padding: 10px;
+	font-size: 18pt;
+	font-family: 'Poiret One', cursive;
+}
+
+li a:hover{
+  background-color: white;
+  color: black;
+  border-radius: .5vw;
+}
+
+.flex-container{
+	display: flex;
+	justify-content: center;
+	column-gap: 15px;
+}
+
+.column{
+	background-color: #e7e5df;
+	width: 45%;
+	padding: 20px;
+	border-radius: 1vw;
+}
+
+.column h1{
+	text-align: center;
+}
+
+.responsive{
+	width: 100%;
+	hieght: auto;
+}
