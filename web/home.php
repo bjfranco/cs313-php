@@ -9,7 +9,7 @@
 <body>
 	<header>
 		<ul class="nav">
-			<li><a href="home.html">HOME</a></li>
+			<li><a href="home.php">HOME</a></li>
 			<li><a href="assignments.html">ASSIGNMENTS</a></li>
 		</ul>
 	</header>
