@@ -1,0 +1,65 @@
+/*HEADER*/
+
+header h1{
+	font-family: 'Share Tech Mono', monospace;
+	text-align: center;
+	color: black;
+	background-color: #D8D8D8;
+	padding: 2.5vw;
+}
+
+.nav{
+	background-color: #333;
+	color: white;
+	list-style-type: none;
+	overflow: hidden;
+}
+
+.nav li{
+	float: right;
+}
+
+.nav li a{
+	color: white;
+	text-decoration: none;
+	display: block;
+	text-align: right;
+	padding: 14px 16px;
+	font-size: 20px;
+	font-family: 'Share Tech Mono', monospace;
+}
+
+.nav li a:hover {
+  background-color: #2FBD48;
+}
+
+/*BODY*/
+
+.flex_container{
+	display: flex;
+}
+
+.flex_container img{
+	height: 100%;
+	width: 100%;
+}
+
+.column{
+	float: left;
+	width: 30%;
+  	padding: 10px;
+  	text-align: center;
+  	font-family: 'Share Tech Mono', monospace;
+}
+
+#submit{
+	background-color: #2FBD48;
+  	border: none;
+  	text-decoration: none;
+  	color: white;
+  	padding: 16px 32px;
+  	width: 100%;
+  	cursor: pointer;
+  	font-size: 20px;
+  	font-family: 'Share Tech Mono', monospace;
+}
