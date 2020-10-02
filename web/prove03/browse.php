@@ -49,20 +49,18 @@ session_start();
 
 
 		<?php
-		/*
 		if (isset($_POST["yellow"])) {
 			$_SESSION["cart_yellow"] = $_POST["yellow"];
-			echo "You added " . $_SESSION["cart_yellow"] . "<br>"
+			echo "You added " . $_SESSION["cart_yellow"] . "<br>";
 		}
 		if (isset($_POST["gray"])) {
 			$_SESSION["cart_gray"] = $_POST["gray"];
-			echo "You added " . $_SESSION["cart_gray"] . "<br>"
+			echo "You added " . $_SESSION["cart_gray"] . "<br>";
 		}
 		if (isset($_POST["white"])) {
 			$_SESSION["cart_white"] = $_POST["white"];
-			echo "You added " . $_SESSION["cart_white"] . "<br>"
+			echo "You added " . $_SESSION["cart_white"] . "<br>";
 		}
-		*/
 		?>
 
 		
