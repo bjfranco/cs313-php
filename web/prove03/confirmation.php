@@ -21,14 +21,15 @@ session_start();
 		<h2>Purchase Confirmation</h2>
 		<?php
 		if (isset($_SESSION["cart_yellow"])) {
-			echo "You have purchased " . $_SESSION["cart_yellow"] . "<br>";
+			echo "1 x Yellow 1.75mm PLA<br>";
 		}
 		if (isset($_SESSION["cart_gray"])) {
-			echo "You have purchased " . $_SESSION["cart_gray"] . "<br>";
+			echo "1 x Gray 1.75mm PLA<br>";
 		}
 		if (isset($_SESSION["cart_white"])) {
-			echo "You have purchased " . $_SESSION["cart_white"] . "<br>";
+			echo "1 x White 1.75mm PLA<br>";
 		}
+		echo "<br>Total: $" . $_SESSION["total"] . "<br>";
 
 		echo "<h3>Shipping Address</h3>";
 		echo $_POST["street"] . "<br>";
