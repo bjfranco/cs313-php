@@ -1,5 +1,5 @@
 <?php
-#session_start();
+session_start();
 ?>
 <!DOCTYPE html>
 <html>
@@ -12,9 +12,9 @@
 	<header>
 		<h1>3D Printer Supply Store</h1>
 		<ul class="nav">
-			<li><a href="checkout.html">Checkout</a></li>
-			<li><a href="cart.html">View Cart</a></li>
-			<li><a href="index.html">Browse Items</a></li>
+			<li><a href="checkout.php">Checkout</a></li>
+			<li><a href="cart.php">View Cart</a></li>
+			<li><a href="browse.php">Browse Items</a></li>
 		</ul>
 	</header>
 
