@@ -35,7 +35,8 @@ session_start();
 			$_SESSION["total_white"] = 20;
 		}
 		echo "<h3>Total: $</h3>";
-		echo "<h3>" . $_SESSION["total_yellow"] + $_SESSION["total_gray"] + $_SESSION["total_white"] . "</h3>";
+		echo $_SESSION["total_yellow"] + $_SESSION["total_gray"] + $_SESSION["total_white"];
+		echo "<br";
 		?>
 		<input type="submit" name="submit" value="Proceed To Checkout">
 		</form>
