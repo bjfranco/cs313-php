@@ -37,6 +37,7 @@ session_start();
 		$_SESSION["total"] = $_SESSION["total_yellow"] + $_SESSION["total_gray"] + $_SESSION["total_white"];
 		echo "<h3>Total: $" . $_SESSION["total"] . "</h3></br>";
 		?>
+		<a href="browse.php" id="return_button">Return to Browse</a><br><br><br>
 		<input type="submit" name="submit" value="Proceed To Checkout">
 		</form>
 	</div>
