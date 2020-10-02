@@ -18,7 +18,7 @@ session_start();
 		</ul>
 	</header>
 	<div class="checkout">
-		<h2>Checkout</h2>
+		<h2>Checkout</h2><br><br>
 		<form action="confirmation.php" method="post">
 			
 		<label for="street">Address</label><br>
@@ -31,9 +31,9 @@ session_start();
 		<input type="city" name="city" placeholder="Phoenix" required><br><br>
 
 		<label for="zip">Zip Code</label><br>
-		<input type="zip" name="zip" placeholder="12345" required><br><br>
+		<input type="zip" name="zip" placeholder="12345" required><br><br><br>
 
-		<a href="cart.php" id="return_button">Return to Cart</a><br>
+		<a href="cart.php" id="return_button">Return to Cart</a><br><br><br>
 		<input type="submit" name="submit" value="Place Order" id="return_button">
 
 		</form>
