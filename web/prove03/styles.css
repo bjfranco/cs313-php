@@ -33,7 +33,7 @@ header h1{
   background-color: #2FBD48;
 }
 
-/*BODY*/
+/*BROWSE*/
 
 .flex_container{
 	display: flex;
@@ -62,4 +62,10 @@ header h1{
   	cursor: pointer;
   	font-size: 20px;
   	font-family: 'Share Tech Mono', monospace;
+}
+
+/*CHECKOUT*/
+
+.cart{
+	text-align: center;
 }

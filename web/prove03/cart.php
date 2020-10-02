@@ -17,8 +17,10 @@ session_start();
 			<li><a href="browse.php">Browse Items</a></li>
 		</ul>
 	</header>
-	<div>
+	<div class="cart">
 		<h2>Shopping Cart</h2>
+
+		<form action="checkout.php" method="post">
 		<?php
 		if (isset($_SESSION["cart_yellow"])) {
 			echo "You added " . $_SESSION["cart_yellow"] . "<br>";
@@ -30,6 +32,8 @@ session_start();
 			echo "You added " . $_SESSION["cart_white"] . "<br>";
 		}
 		?>
+		<input type="submit" name="submit" value="Proceed To Checkout">
+		</form>
 	</div>
 
 </body>
