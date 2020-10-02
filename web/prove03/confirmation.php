@@ -29,6 +29,10 @@ session_start();
 		if (isset($_SESSION["cart_white"])) {
 			echo "You have purchased " . $_SESSION["cart_white"] . "<br>";
 		}
+
+		echo "<h3>Shipping Address</h3>";
+		echo $_POST["street"];
+		echo $_POST["city"] . ", " . $_POST["state"] . " " . $_PSOT["zip"]; 
 		?>
 
 		<?php

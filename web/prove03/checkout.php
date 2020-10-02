@@ -22,16 +22,16 @@ session_start();
 		<form action="confirmation.php" method="post">
 			
 		<label for="street">Address</label>
-		<input type="text" name="street" id="street" placeholder="123 Main Street">
+		<input type="text" name="street" id="street" placeholder="123 Main Street" required>
 
 		<label for="state">State</label>
-		<input type="text" name="state" id="state" placeholder="Arizona">
+		<input type="text" name="state" id="state" placeholder="Arizona" required>
 
 		<label for="city">City</label>
-		<input type="city" name="city" placeholder="Phoenix">
+		<input type="city" name="city" placeholder="Phoenix" required>
 
 		<label for="zip">Zip Code</label>
-		<input type="zip" name="zip" placeholder="12345">
+		<input type="zip" name="zip" placeholder="12345" required>
 
 		<a href="cart.php" id="return_button">Return to Cart</a>
 		<input type="submit" name="submit" value="Place Order" id="return_button">
