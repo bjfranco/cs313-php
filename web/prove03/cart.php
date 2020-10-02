@@ -38,7 +38,7 @@ session_start();
 		echo "<h3>Total: $" . $_SESSION["total"] . "</h3></br>";
 		?>
 		<a href="browse.php" id="return_button">Return to Browse</a><br><br><br>
-		<input type="submit" name="submit" value="Proceed To Checkout">
+		<input type="submit" name="submit" value="Proceed To Checkout" id="return_button">
 		</form>
 	</div>
 
