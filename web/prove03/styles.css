@@ -74,6 +74,16 @@ header h1{
   	padding: 10px;
 }
 
+.checkout{
+	justify-content: center;
+	text-align: justify;
+	margin: auto;
+  	width: 50%;
+  	border: 3px solid black;
+  	padding: 20px;
+}
+
+
 #return_button{
 	background-color: #2FBD48;
   	border: none;

@@ -17,7 +17,7 @@ session_start();
 			<li><a href="browse.php">Browse Items</a></li>
 		</ul>
 	</header>
-	<div class="cart">
+	<div class="checkout">
 		<h2>Checkout</h2>
 		<form action="confirmation.php" method="post">
 			
