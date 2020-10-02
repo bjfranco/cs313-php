@@ -75,7 +75,7 @@ header h1{
 }
 
 .checkout{
-	display: block;
+	display: inline-block;
 	justify-content: center;
 	text-align: justify;
 	margin: auto;
@@ -90,8 +90,9 @@ header h1{
   	border: none;
   	text-decoration: none;
   	color: white;
-  	padding: 16px 32px;
+  	padding: 16px;
   	cursor: pointer;
   	font-size: 20px;
   	font-family: 'Share Tech Mono', monospace;
+  	width: 15%;
 }
