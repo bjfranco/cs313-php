@@ -73,3 +73,14 @@ header h1{
   	border: 3px solid black;
   	padding: 10px;
 }
+
+#return_button{
+	background-color: #2FBD48;
+  	border: none;
+  	text-decoration: none;
+  	color: white;
+  	padding: 16px 32px;
+  	cursor: pointer;
+  	font-size: 20px;
+  	font-family: 'Share Tech Mono', monospace;
+}

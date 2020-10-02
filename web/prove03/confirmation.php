@@ -6,7 +6,7 @@ session_start();
 <head>
 	<link rel="stylesheet" type="text/css" href="styles.css">
 	<link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
-	<title>Shopping Cart</title>
+	<title>Purchase Confirmation</title>
 </head>
 <body>
 	<header>
@@ -18,27 +18,18 @@ session_start();
 		</ul>
 	</header>
 	<div class="cart">
-		<h2>Shopping Cart</h2>
-
-		<form action="checkout.php" method="post">
+		<h2>Purchase Confirmation</h2>
 		<?php
 		if (isset($_SESSION["cart_yellow"])) {
-			echo "<h3>Yellow 1.75mm PLA - $20</h3>";
-			$_SESSION["total_yellow"] = 20;
+			echo "You have purchased " . $_SESSION["cart_yellow"] . "<br>";
 		}
 		if (isset($_SESSION["cart_gray"])) {
-			echo "<h3>Gray 1.75mm PLA - $20</h3>";
-			$_SESSION["total_gray"] = 20;
+			echo "You have purchased " . $_SESSION["cart_gray"] . "<br>";
 		}
 		if (isset($_SESSION["cart_white"])) {
-			echo "<h3>White 1.75mm PLA - $20</h3>";
-			$_SESSION["total_white"] = 20;
+			echo "You have purchased " . $_SESSION["cart_white"] . "<br>";
 		}
-		$_SESSION["total"] = $_SESSION["total_yellow"] + $_SESSION["total_gray"] + $_SESSION["total_white"];
-		echo "<h3>Total: $" . $_SESSION["total"] . "</h3></br>";
 		?>
-		<input type="submit" name="submit" value="Proceed To Checkout">
-		</form>
 	</div>
 
 </body>

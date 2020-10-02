@@ -6,7 +6,7 @@ session_start();
 <head>
 	<link rel="stylesheet" type="text/css" href="styles.css">
 	<link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
-	<title>Browse Items</title>
+	<title>Checkout</title>
 </head>
 <body>
 	<header>
@@ -19,7 +19,28 @@ session_start();
 	</header>
 	<div>
 		<h2>Checkout</h2>
+		<form action="confirmation.php" method="post">
+			
+		<label for="street">Address</label>
+		<input type="text" name="street" id="street" placeholder="123 Main Street">
+
+		<label for="state">State</label>
+		<input type="text" name="state" id="state" placeholder="Arizona">
+
+		<label for="city">City</label>
+		<input type="city" name="city" placeholder="Phoenix">
+
+		<label for="zip">Zip Code</label>
+		<input type="zip" name="zip" placeholder="12345">
+
+		<a href="cart.php" id="return_button">Return to Cart</a>
+		<input type="submit" name="submit" value="Place Order">
+
+		</form>
+
+
 		<?php
+		/*
 		if (isset($_SESSION["cart_yellow"])) {
 			echo "You added " . $_SESSION["cart_yellow"] . "<br>";
 		}
@@ -29,6 +50,7 @@ session_start();
 		if (isset($_SESSION["cart_white"])) {
 			echo "You added " . $_SESSION["cart_white"] . "<br>";
 		}
+		*/
 		?>
 	</div>
 
