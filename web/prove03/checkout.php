@@ -34,7 +34,7 @@ session_start();
 		<input type="zip" name="zip" placeholder="12345">
 
 		<a href="cart.php" id="return_button">Return to Cart</a>
-		<input type="submit" name="submit" value="Place Order">
+		<input type="submit" name="submit" value="Place Order" id="return_button">
 
 		</form>
 
