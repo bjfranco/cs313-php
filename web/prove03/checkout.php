@@ -17,23 +17,23 @@ session_start();
 			<li><a href="browse.php">Browse Items</a></li>
 		</ul>
 	</header>
-	<div>
+	<div class="cart">
 		<h2>Checkout</h2>
 		<form action="confirmation.php" method="post">
 			
 		<label for="street">Address</label>
-		<input type="text" name="street" id="street" placeholder="123 Main Street" required>
+		<input type="text" name="street" id="street" placeholder="123 Main Street" required><br>
 
 		<label for="state">State</label>
-		<input type="text" name="state" id="state" placeholder="Arizona" required>
+		<input type="text" name="state" id="state" placeholder="Arizona" required><br>
 
 		<label for="city">City</label>
-		<input type="city" name="city" placeholder="Phoenix" required>
+		<input type="city" name="city" placeholder="Phoenix" required><br>
 
 		<label for="zip">Zip Code</label>
-		<input type="zip" name="zip" placeholder="12345" required>
+		<input type="zip" name="zip" placeholder="12345" required><br>
 
-		<a href="cart.php" id="return_button">Return to Cart</a>
+		<a href="cart.php" id="return_button">Return to Cart</a><br>
 		<input type="submit" name="submit" value="Place Order" id="return_button">
 
 		</form>
