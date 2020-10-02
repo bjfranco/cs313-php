@@ -22,6 +22,7 @@ session_start();
 		<?php
 		if (isset($_SESSION["cart_yellow"])) {
 			echo "You have purchased " . $_SESSION["cart_yellow"] . "<br>";
+			$_SESSION["cart_yellow"] = "";
 		}
 		if (isset($_SESSION["cart_gray"])) {
 			echo "You have purchased " . $_SESSION["cart_gray"] . "<br>";
