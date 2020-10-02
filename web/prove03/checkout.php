@@ -18,7 +18,7 @@ session_start();
 		</ul>
 	</header>
 	<div>
-		<h2>Shopping Cart</h2>
+		<h2>Checkout</h2>
 		<?php
 		if (isset($_SESSION["cart_yellow"])) {
 			echo "You added " . $_SESSION["cart_yellow"] . "<br>";
