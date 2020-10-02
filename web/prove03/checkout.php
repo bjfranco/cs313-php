@@ -18,7 +18,7 @@ session_start();
 		</ul>
 	</header>
 	<div class="checkout">
-		<h2>Checkout</h2><br><br>
+		<h2>Checkout</h2>
 		<form action="confirmation.php" method="post">
 			
 		<label for="street">Address</label><br>

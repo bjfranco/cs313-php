@@ -75,7 +75,6 @@ header h1{
 }
 
 .checkout{
-	display: flex;
 	justify-content: center;
 	text-align: justify;
 	margin: auto;
