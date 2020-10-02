@@ -44,26 +44,28 @@ session_start();
 				<input type="checkbox" name="white" value="white" id="white">
 			</div>
 
-			<input type="submit" name="submit" value="Add To Cart" id="submit">
+			<input type="submit" name="submit" value="Add To Cart" id="submit" onclick="addAlert()">
+			<script type="text/javascript">
+				function addAlert(){
+					alert("Item(s) Added To Cart!");
+				}
+			</script>
 		</form>
 
 
 		<?php
 		if (isset($_POST["yellow"])) {
 			$_SESSION["cart_yellow"] = $_POST["yellow"];
-			echo "You added " . $_SESSION["cart_yellow"] . "<br>";
-			echo "alert("1 x Yellow PLA Added to Cart")";
+			/*echo "You added " . $_SESSION["cart_yellow"] . "<br>";*/
 		}
 		if (isset($_POST["gray"])) {
 			$_SESSION["cart_gray"] = $_POST["gray"];
-			echo "You added " . $_SESSION["cart_gray"] . "<br>";
-			echo "alert("1 x Yellow PLA Added to Cart")";
+			/*echo "You added " . $_SESSION["cart_gray"] . "<br>";*/
 
 		}
 		if (isset($_POST["white"])) {
 			$_SESSION["cart_white"] = $_POST["white"];
-			echo "You added " . $_SESSION["cart_white"] . "<br>";
-			echo "alert("1 x Yellow PLA Added to Cart")";
+			/*echo "You added " . $_SESSION["cart_white"] . "<br>";*/
 		}
 		?>
 
