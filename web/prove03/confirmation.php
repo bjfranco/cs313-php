@@ -22,7 +22,6 @@ session_start();
 		<?php
 		if (isset($_SESSION["cart_yellow"])) {
 			echo "You have purchased " . $_SESSION["cart_yellow"] . "<br>";
-			$_SESSION["cart_yellow"] = "";
 		}
 		if (isset($_SESSION["cart_gray"])) {
 			echo "You have purchased " . $_SESSION["cart_gray"] . "<br>";
@@ -30,6 +29,12 @@ session_start();
 		if (isset($_SESSION["cart_white"])) {
 			echo "You have purchased " . $_SESSION["cart_white"] . "<br>";
 		}
+		?>
+
+		<?php
+		//end the session
+		session_unset();
+		session_destroy();
 		?>
 	</div>
 
