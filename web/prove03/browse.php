@@ -1,7 +1,6 @@
 <?php
-session_start();
+#session_start();
 ?>
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -50,6 +49,7 @@ session_start();
 
 
 		<?php
+		/*
 		if (isset($_POST["yellow"])) {
 			$_SESSION["cart_yellow"] = $_POST["yellow"];
 			echo "You added " . $_SESSION["cart_yellow"] . "<br>"
@@ -62,7 +62,9 @@ session_start();
 			$_SESSION["cart_white"] = $_POST["white"];
 			echo "You added " . $_SESSION["cart_white"] . "<br>"
 		}
+		*/
 		?>
+
 		
 	
 	</div>
