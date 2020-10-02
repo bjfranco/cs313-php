@@ -24,17 +24,17 @@ session_start();
 		<?php
 		if (isset($_SESSION["cart_yellow"])) {
 			echo "<h3>Yellow 1.75mm PLA - $20</h3><br>";
-			$_SESSION["total"] += 20;
+			$_SESSION["total_yellow"] = 20;
 		}
 		if (isset($_SESSION["cart_gray"])) {
 			echo "<h3>Gray 1.75mm PLA - $20</h3><br>";
-			$_SESSION["total"] += 20;
+			$_SESSION["total_gray"] = 20;
 		}
 		if (isset($_SESSION["cart_white"])) {
 			echo "<h3>White 1.75mm PLA - $20</h3><br>";
-			$_SESSION["total"] += 20;
+			$_SESSION["total_white"] = 20;
 		}
-		echo "<h3>Total: " . $_SESSION["total"] . "</h3><br>";
+		echo "<h3>Total: $" . $_SESSION["total_yellow"] + $_SESSION["total_gray"] + $_SESSION["total_white"] . ".00</h3><br>";
 		?>
 		<input type="submit" name="submit" value="Proceed To Checkout">
 		</form>
