@@ -34,7 +34,8 @@ session_start();
 			echo "<h3>White 1.75mm PLA - $20</h3><br>";
 			$_SESSION["total_white"] = 20;
 		}
-		echo "<h3>Total: $" . $_SESSION["total_yellow"] + $_SESSION["total_gray"] + $_SESSION["total_white"] . ".00</h3><br>";
+		echo "<h3>Total: $</h3>";
+		echo $_SESSION["total_yellow"] + $_SESSION["total_gray"] + $_SESSION["total_white"];
 		?>
 		<input type="submit" name="submit" value="Proceed To Checkout">
 		</form>
