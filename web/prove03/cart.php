@@ -23,14 +23,18 @@ session_start();
 		<form action="checkout.php" method="post">
 		<?php
 		if (isset($_SESSION["cart_yellow"])) {
-			echo "You added " . $_SESSION["cart_yellow"] . "<br>";
+			echo "<h3>Yellow 1.75mm PLA - $20</h3><br>";
+			$_SESSION["total"] += 20;
 		}
 		if (isset($_SESSION["cart_gray"])) {
-			echo "You added " . $_SESSION["cart_gray"] . "<br>";
+			echo "<h3>Gray 1.75mm PLA - $20</h3><br>";
+			$_SESSION["total"] += 20;
 		}
 		if (isset($_SESSION["cart_white"])) {
-			echo "You added " . $_SESSION["cart_white"] . "<br>";
+			echo "<h3>White 1.75mm PLA - $20</h3><br>";
+			$_SESSION["total"] += 20;
 		}
+		echo "<h3>Total: " . $_SESSION["total"] . "</h3><br>";
 		?>
 		<input type="submit" name="submit" value="Proceed To Checkout">
 		</form>
