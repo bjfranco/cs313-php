@@ -31,8 +31,8 @@ session_start();
 		}
 
 		echo "<h3>Shipping Address</h3>";
-		echo $_POST["street"];
-		echo $_POST["city"] . ", " . $_POST["state"] . " " . $_PSOT["zip"]; 
+		echo $_POST["street"] . "<br>";
+		echo $_POST["city"] . ", " . $_POST["state"] . " " . $_POST["zip"]; 
 		?>
 
 		<?php
