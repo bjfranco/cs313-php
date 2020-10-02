@@ -19,12 +19,10 @@ session_start();
 	</header>
 	<div class="cart">
 		<h2>Shopping Cart</h2>
-
-
-		<form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post">
+		<form action="checkout.php" method="post">
 		<?php
 		if (isset($_SESSION["cart_yellow"])) {
-			echo "<input type="checkbox" name="remove_yellow"><p>1 x Yellow 1.75mm PLA - $20</p><br>";
+			echo "1 x Yellow 1.75mm PLA - $20<br>";
 			$_SESSION["total_yellow"] = 20;
 		}
 		if (isset($_SESSION["cart_gray"])) {
@@ -38,18 +36,9 @@ session_start();
 		$_SESSION["total"] = $_SESSION["total_yellow"] + $_SESSION["total_gray"] + $_SESSION["total_white"];
 		echo "<h3>Total: $" . $_SESSION["total"] . "</h3></br>";
 		?>
-
-		<input type="submit" name="submit" value="Remove Item(s)" id="return_button">
 		<a href="browse.php" id="return_button">Return to Browse</a><br><br><br>
-		<a href="checkout.php" id="return_button">Proceed to Checkout</a><br><br><br>
+		<input type="submit" name="submit" value="Proceed To Checkout" id="return_button">
 		</form>
-
-		<?php
-		if (isset($_POST["remove_yellow"])) {
-			$_SESSION["cart_yellow"] = "";
-		}
-		?>
-
 	</div>
 
 </body>
