@@ -44,7 +44,7 @@ session_start();
 				<input type="checkbox" name="white" value="white" id="white">
 			</div>
 
-			<input type="submit" name="submit" value="Add To Cart" id="submit" onclick="addAlert()">
+			<input type="submit" name="submit" value="Add To Cart" id="submit" onclick="addAlert()"><br>
 			<script type="text/javascript">
 				function addAlert(){
 					alert("Item(s) Added To Cart!");
