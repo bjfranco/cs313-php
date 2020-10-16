@@ -72,8 +72,8 @@
 		        	foreach ($db->query('SELECT Bird.birdname, Sighting.state FROM Sighting INNER JOIN Bird ON Bird.birdid = Sighting.birdid') as $row)
 					{
 						//if ($_POST['bird'] == $row['Bird.birdname']) {
-							echo 'Bird: ' . $row['Bird.birdname'] . '<br>';
-					  		echo 'Location: ' . $row['Sighting.state'] . '<br>';
+							echo 'Bird: ' . $row['birdname'] . '<br>';
+					  		echo 'Location: ' . $row['state'] . '<br>';
 						//}
 					  
 					}
