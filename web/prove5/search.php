@@ -75,6 +75,9 @@
 							echo 'Bird: ' . $row['birdname'] . '<br>';
 					  		echo 'Location: ' . $row['state'] . '<br>';
 						}
+						else {
+							echo '<h3>No Record Found</h3>'
+						}
 					  
 					}
 		        }
