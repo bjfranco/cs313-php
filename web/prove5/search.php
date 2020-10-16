@@ -71,8 +71,11 @@
 		        if (!empty($bird)) {
 		        	foreach ($db->query('SELECT birdid, city, state, country FROM Sighting') as $row)
 					{
-					  echo 'Bird: ' . $row['birdid'] . '<br>';
-					  echo 'Location: ' . $row['city'] . '<br>';
+						if ($_POST['bird'] == $row['birdid']) {
+							echo 'Bird: ' . $row['birdid'] . '<br>';
+					  		echo 'Location: ' . $row['city'] . '<br>';
+						}
+					  
 					}
 		        }
 			?>
