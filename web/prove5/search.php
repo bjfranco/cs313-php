@@ -23,8 +23,8 @@
 			<input type="submit" name="submit" value="Search">
 		</form>
 
+<!--
 		<h2>Location Search</h2>
-		<form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post">
 			<label for="city">City:</label><br>
 			<input type="text" name="city" id="city"><br>
 
@@ -33,9 +33,11 @@
 
 			<label for="country">Country:</label><br>
 			<input type="text" name="country" id="country"><br><br>
-			
+
 			<input type="submit" name="submit" value="Search">
 		</form>
+	-->
+
 
 			<?php
 			    try
@@ -59,6 +61,20 @@
 		        echo 'Error!: ' . $ex->getMessage();
 		        die();
 		        } 
+
+
+		        $bird = $_POST['bird'];
+		        $city = $_POST['city'];
+		        $state = $_POST['state'];
+		        $country = $_POST['country'];
+
+		        if (!empty($bird)) {
+		        	foreach ($db->query('SELECT birdid, state FROM sighting') as $row)
+					{
+					  echo 'Bird: ' . $row['birdid'] . '<br>';
+					  echo 'Location: ' . $row['state'] . '<br>';
+					}
+		        }
 			?>
 
 	</div>
