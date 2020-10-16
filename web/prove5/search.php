@@ -69,11 +69,11 @@
 		        $country = $_POST['country'];
 
 		        if (!empty($bird)) {
-		        	foreach ($db->query('SELECT birdid, city, state, country FROM Sighting') as $row)
+		        	foreach ($db->query('SELECT Bird.birdname, Sighting.state FROM Sighting INNER JOIN Bird ON Sighting.birdid=Bird.birdid') as $row)
 					{
-						if ($_POST['bird'] == $row['birdid']) {
-							echo 'Bird: ' . $row['birdid'] . '<br>';
-					  		echo 'Location: ' . $row['city'] . '<br>';
+						if ($_POST['bird'] == $row['Bird.birdname']) {
+							echo 'Bird: ' . $row['Bird.birdname'] . '<br>';
+					  		echo 'Location: ' . $row['Sighting.state'] . '<br>';
 						}
 					  
 					}
