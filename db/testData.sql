@@ -46,6 +46,9 @@ VALUES(5, 1, 'Toronto', 'Ontario', 'Canada', '2020-10-05');
 INSERT INTO Sighting(memberid, birdid, city, state, country, sighttime)
 VALUES(3, 3, 'Manti', 'Utah', 'United States', '2020-09-07');
 
+INSERT INTO Sighting(memberid, birdid, city, state, country, sighttime)
+VALUES(1, 1, 'Manti', 'Utah', 'United States', '2020-09-07');
+
 /*JOIN STATEMENTS*/
 
 SELECT Bird.birdname, Sighting.city, Sighting.state, Sighting.country, Sighting.sighttime

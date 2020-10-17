@@ -68,15 +68,28 @@
 		        $state = $_POST['state'];
 		        $country = $_POST['country'];
 
+/*
 		        if (!empty($bird)) {
 		        	foreach ($db->query('SELECT Bird.birdname, Sighting.city, Sighting.state, Sighting.country, Sighting.sighttime FROM Sighting INNER JOIN Bird ON Bird.birdid = Sighting.birdid') as $row)
 					{
 						if ($_POST['bird'] == $row['birdname']) {
-							echo '<h3>' . $row['birdname'] . '</h3><br>';
+							echo '<h3>' . $row['birdname'] . '</h3>';
 					  		echo 'Location: ' . $row['city'] . ', ' . $row['state'] . ', ' . $row['country'] . '<br>';
 					  		echo 'Date: ' . $row['sighttime'] . '<br>';
 						}
 					}
+		        }
+*/
+		        if (!empty($bird)) {
+		        	echo '<h3>' . $bird . '</h3>';
+		        	echo '<table><tr><th>Date</th><th>City</th><th>State</th><th>Country</th></tr>';
+		        	foreach ($db->query('SELECT Bird.birdname, Sighting.city, Sighting.state, Sighting.country, Sighting.sighttime FROM Sighting INNER JOIN Bird ON Bird.birdid = Sighting.birdid') as $row)
+					{
+						if ($_POST['bird'] == $row['birdname']) {
+					  		echo '<tr><td>' . $row['sighttime'] . '</td><td>' . $row['city'] . '</td><td>' . $row['state'] . '</td><td>' . $row['country'] . '</td></tr>';
+						}
+					}
+					echo '</table>';
 		        }
 			?>
 
