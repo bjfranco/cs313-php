@@ -14,7 +14,7 @@
 		</ul>
 	</header>
 
-	<div>
+	<div class="search">
 		<h2>Bird Search</h2>
 		<form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post">
 
