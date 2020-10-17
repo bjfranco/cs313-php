@@ -41,7 +41,7 @@
 
 	<div class="search">
 		<h2>Bird Search</h2><br>
-		<p>Enter the name of the bird you are looking for and a record will be displayed showing where and when this bird has been seen.</p>
+		<p>Select the bird you are looking for and a record will be displayed showing where and when this bird has been seen.</p>
 		<form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post">
 
 			<select name="bird" id="bird">
@@ -53,6 +53,7 @@
 				}
 				?>
 
+				<br>
 				<input type="submit" name="submit" value="Search">
 
 			</select>
