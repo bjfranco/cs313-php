@@ -15,13 +15,13 @@
 	</header>
 
 	<div class="search">
-		<h2>Bird Search</h2>
+		<h2>Bird Search</h2><br>
 		<form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post">
 
 			<label for="bird">Bird Name:</label><br>
 			<input type="text" name="bird" id="bird"><br><br>
 			<input type="submit" name="submit" value="Search">
-		</form>
+		</form><br>
 
 <!--
 		<h2>Location Search</h2>
