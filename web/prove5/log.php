@@ -14,8 +14,29 @@
 		</ul>
 	</header>
 
-	<div>
-		<h2>Coming Soon!</h2>
+	<div id="search">
+		<h2>Log Bird Sighting</h2>
+		<p>Log your recent bird sighting below:</p>
+
+		<form method="post">
+			<label for="bird">Bird Name:</label><br>
+			<input type="text" name="bird" id="bird"><br>
+
+			<label for="city">City:</label><br>
+			<input type="text" name="city" id="city"><br>
+
+			<label for="state">State:</label><br>
+			<input type="text" name="state" id="state"><br>
+
+			<label for="country">Country:</label><br>
+			<input type="text" name="country" id="country"><br>
+
+			<label for="date">Date:</label><br>
+			<input type="text" name="date" id="date"><br>
+
+			<input type="submit" name="submit" value="Submit"><br>
+			
+		</form>
 	</div>
 
 </body>
