@@ -81,7 +81,7 @@
 		        }
 */
 		        if (!empty($bird)) {
-		        	echo '<h3>' . $bird . '</h3>';
+		        	echo '<div class="table"><h3>' . $bird . '</h3>';
 		        	echo '<table><tr><th>Date</th><th>City</th><th>State</th><th>Country</th></tr>';
 		        	foreach ($db->query('SELECT Bird.birdname, Sighting.city, Sighting.state, Sighting.country, Sighting.sighttime FROM Sighting INNER JOIN Bird ON Bird.birdid = Sighting.birdid') as $row)
 					{
@@ -89,7 +89,7 @@
 					  		echo '<tr><td>' . $row['sighttime'] . '</td><td>' . $row['city'] . '</td><td>' . $row['state'] . '</td><td>' . $row['country'] . '</td></tr>';
 						}
 					}
-					echo '</table>';
+					echo '</table></div>';
 		        }
 			?>
 
