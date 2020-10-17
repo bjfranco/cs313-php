@@ -16,6 +16,7 @@
 
 	<div class="search">
 		<h2>Bird Search</h2><br>
+		<p>Enter the name of the bird you are looking for and a record will be displayed showing where and when this bird has been seen.</p>
 		<form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post">
 
 			<label for="bird">Bird Name:</label><br>

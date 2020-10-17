@@ -18,6 +18,33 @@ VALUES('Cactus Wren');
 INSERT INTO Bird(birdname)
 VALUES('Hummingbird');
 
+INSERT INTO Bird(birdname)
+VALUES('Finch');
+
+INSERT INTO Bird(birdname)
+VALUES('Pigeon');
+
+INSERT INTO Bird(birdname)
+VALUES('Crow');
+
+INSERT INTO Bird(birdname)
+VALUES('Hawk');
+
+INSERT INTO Bird(birdname)
+VALUES('Owl');
+
+INSERT INTO Bird(birdname)
+VALUES('Woodpecker');
+
+INSERT INTO Bird(birdname)
+VALUES('Heron');
+
+INSERT INTO Bird(birdname)
+VALUES('Crane');
+
+INSERT INTO Bird(birdname)
+VALUES('Flamingo');
+
 /*MEMBER*/
 
 INSERT INTO Member(firstname, lastname)
@@ -48,6 +75,15 @@ VALUES(3, 3, 'Manti', 'Utah', 'United States', '2020-09-07');
 
 INSERT INTO Sighting(memberid, birdid, city, state, country, sighttime)
 VALUES(1, 1, 'Manti', 'Utah', 'United States', '2020-09-07');
+
+INSERT INTO Sighting(memberid, birdid, city, state, country, sighttime)
+VALUES(2, 5, 'Kingston', 'New York', 'United States', '2019-02-28');
+
+INSERT INTO Sighting(memberid, birdid, city, state, country, sighttime)
+VALUES(4, 2, 'Sacramento', 'California', 'United States', '2018-11-15');
+
+INSERT INTO Sighting(memberid, birdid, city, state, country, sighttime)
+VALUES(4, 1, 'Helena', 'Montana', 'United States', '2019-04-20');
 
 /*JOIN STATEMENTS*/
 
