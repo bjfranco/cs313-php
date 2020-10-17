@@ -34,9 +34,9 @@
 }
 
 .table{
-	margin-left: 0 auto;
- 	margin-right: 0 auto;
- 	text-align: center;
+  	justify-content: center;
+  	align-items: center;
+	text-align: center;
 }
 
 .table table, th, td{
