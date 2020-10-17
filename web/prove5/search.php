@@ -44,9 +44,23 @@
 		<p>Enter the name of the bird you are looking for and a record will be displayed showing where and when this bird has been seen.</p>
 		<form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post">
 
+			<select name="bird" id="bird">
+				
+				<?php
+				foreach ($db->query('SELECT birdname FROM Bird') as $row)
+				{
+					echo '<option value="' . $row['birdname'] . '">' . $row['birdname'] . '</option>';
+				}
+				?>
+
+			</select>
+
+			<!--
 			<label for="bird">Bird Name:</label><br>
 			<input type="text" name="bird" id="bird"><br><br>
 			<input type="submit" name="submit" value="Search">
+			-->
+
 		</form><br>
 
 		<?php
