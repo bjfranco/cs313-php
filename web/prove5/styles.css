@@ -30,6 +30,7 @@
 .table{
 	margin-left: auto;
  	margin-right: auto;
+ 	text-align: center;
 }
 
 .table table, th, td{
