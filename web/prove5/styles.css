@@ -27,6 +27,12 @@
  	background-color: red;
 }
 
+.search{
+	margin-left: auto;
+ 	margin-right: auto;
+	text-align: center;
+}
+
 .table{
 	margin-left: auto;
  	margin-right: auto;
