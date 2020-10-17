@@ -53,6 +53,8 @@
 				}
 				?>
 
+				<input type="submit" name="submit" value="Search">
+
 			</select>
 
 			<!--
