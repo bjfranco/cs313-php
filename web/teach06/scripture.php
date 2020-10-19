@@ -26,13 +26,24 @@ function insertScripture($db, $book, $chapter, $verse, $content)
 	$statement = $db->prepare('INSERT INTO Scripture(Book, Chapter, Verse, Content) VALUES(:book, :chapter, :verse, :content)');
 	$statement->execute(array(':book' => $book, ':chapter' => $chapter, ':verse' => $verse, ':content' => $content));
 }
-function insertScriptureTopic()
-{
 
+function insertScriptureTopic($db, $scripture, $topic)
+{
+	$statement = $db->prepare('INSERT INTO scripturetopic(scriptureid, topicid) VALUES(:scripture, :topic)');
+	$statement->execute(array(':scripture' => $scripture, ':topic' => $topic));
 }
+
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 	insertScripture($db, $_POST['book'], $_POST['chapter'], $_POST['verse'], $_POST['content']);
+
+	$lastScripture = $db->lastInsertId('scripture_scriptureid_seq');
+
+	foreach ($_POST['topics'] as $topic) {
+		insertScriptureTopic($db, $lastScripture, $topic);
+	}
+	
 }
+
 ?>
 <!DOCTYPE html>
 <html>
@@ -57,9 +68,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
 		<?php
 
-			foreach ($db->query('SELECT topicname FROM topic') as $row)
+			foreach ($db->query('SELECT topicname, id FROM topic') as $row)
 			{
-				echo '<input type="checkbox" name="topics" value="' . $row['topicname'] . '" id="' . $row['topicname'] . '">';
+				echo '<input type="checkbox" name="topics" value="' . $row['id'] . '" id="' . $row['topicname'] . '">';
 				echo '<label for="' . $row['topicname'] . '">' . $row['topicname'] . '</label><br>';
 			}
 		?>
