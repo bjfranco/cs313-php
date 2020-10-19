@@ -70,7 +70,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
 			foreach ($db->query('SELECT topicname, id FROM topic') as $row)
 			{
-				echo '<input type="checkbox" name="topics" value="' . $row['id'] . '" id="' . $row['topicname'] . '">';
+				echo '<input type="checkbox" name="topics[]" value="' . $row['id'] . '" id="' . $row['topicname'] . '">';
 				echo '<label for="' . $row['topicname'] . '">' . $row['topicname'] . '</label><br>';
 			}
 		?>
