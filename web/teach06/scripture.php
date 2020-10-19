@@ -45,8 +45,9 @@
 
 			foreach ($db->query('SELECT topicname FROM topic') as $row)
 			{
-				echo '<input type="checkbox" name="topics" value="' . $row['topicname'] . '" id="' . $row['topicname'] . '"">';
+				echo '<input type="checkbox" name="topics" value="' . $row['topicname'] . '" id="' . $row['topicname'] . '">';
 				echo '<label for="' . $row['topicname'] . '">' . $row['topicname'] . '</label><br>';
+			}
 		?>
 
 		<input type="submit" name="submit">
