@@ -16,7 +16,7 @@
 		<input type="text" name="verse" id="verse"><br>
 
 		<label for="content">Book</label>
-		<textarea id="content" name="content" rows="4" cols="50"></textarea>
+		<textarea id="content" name="content" rows="4" cols="50"></textarea><br>
 
 
 		<?php
@@ -46,7 +46,7 @@
 			foreach ($db->query('SELECT topicname FROM topic') as $row)
 			{
 				echo '<input type="checkbox" name="topics" value="' . $row['topicname'] . '" id="' . $row['topicname'] . '"">';
-			}
+				echo '<label for="' . $row['topicname'] . '">' . $row['topicname'] . '</label><br>';
 		?>
 
 		<input type="submit" name="submit">
