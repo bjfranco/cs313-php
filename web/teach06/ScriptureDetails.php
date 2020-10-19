@@ -31,7 +31,7 @@
 
         foreach ($db->query('SELECT scriptureid, book, chapter, verse, content FROM scripture') as $row)
         {
-            if($_GET['scriptureId'] == $row['scriptureid'])
+            if($_GET['scriptureid'] == $row['scriptureid'])
             {
                 echo '<p><b>' . $row['book'] . ' ' . $row['chapter'] . ':' . $row['verse'] . '</b> - "' . $row['content'] . '"';
                 echo '<p/>';
@@ -45,9 +45,10 @@
                 $stmt->execute();
                 $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
-                foreach ($rows as $topic)
+                foreach ($rows as $topic){
                     echo $topic['topicname'] . "<br>";
                 }
+                
             }
         }
 
