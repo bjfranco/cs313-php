@@ -21,7 +21,7 @@
     die();
     } 
 
-    function insertLog($db, $birdid, $memberid, $city, $state, $country, $sighttime)
+    function insertLog($db, $memberid, $birdid, $city, $state, $country, $sighttime)
     {
 
     	$statement = $db->prepare('INSERT INTO Sighting(MemberId, BirdId, City, State, Country, SightTime) VALUES(:memberid :birdid, :city, :state, :country, :sighttime)');
