@@ -23,32 +23,10 @@
 
     function insertLog($db, $birdid, $city, $state, $country, $sighttime)
     {
-    	/*$stmt = $db->query('SELECT birdid FROM Bird WHERE birdname=' . $_POST['bird'] . '') AS $birdid;
-    	$stmt->execute(array(':birdid' = $birdid));*/
-
-    	/*$stmt = $db->prepare('SELECT birdname FROM Bird WHERE birdid=:birdid');
-		$stmt->bindValue(':birdid', $birdid, PDO::PARAM_INT);
-		$stmt->execute();
-		$rows = $stmt->fetchAll(PDO::FETCH_ASSOC);*/
-
-		/*foreach ($db->query('SELECT Bird.birdname FROM Sighting INNER JOIN Bird ON Bird.birdid = Sighting.birdid') as $row)
-		{
-			if ($row == $birdid) {
-				$birdid = 'birdid';
-			}
-		}*/
 
     	$statement = $db->prepare('INSERT INTO Sighting(BirdId, City, State, Country, SightTime) VALUES(:birdid, :city, :state, :country, :sighttime)');
 		$statement->execute(array(':birdid' => $birdid, ':city' => $city, ':state' => $state, ':country' => $country, ':sighttime' => $sighttime));
     }
-
-    function addBird($db, $birdid)
-    {
-    	/*$birdentry = htmlspecialchars('$_POST['birdid']');*/
-    	/*$statement = $db->prepare('UPDATE Sighting SET Sighting.birdid = Bird.birdid FROM Sighting INNER JOIN Bird ON Sighting.birdid = Bird.birdid WHERE Bird.birdname = :birdid');
-    	$statement->execute(array(':birdid' => $birdid));*/
-    }
-
 
     if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     	if (isset($_POST['birdid'])) {
@@ -60,7 +38,6 @@
 			}
 		}
     	insertLog($db, $_POST['birdid'], $_POST['city'], $_POST['state'], $_POST['country'], $_POST['sighttime']);
-    	/*addBird($db, $_POST['birdid']);*/
     }
 
 ?>
