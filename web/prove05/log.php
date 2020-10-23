@@ -102,6 +102,7 @@
 				if ($row['birdname'] == $_POST['birdid']) {
 					$_POST['birdid'] = $row['birdid'];
 				}
+				echo $_POST['birdid'];
 			}
 		}
 		?>
