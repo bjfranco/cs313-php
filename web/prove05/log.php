@@ -45,13 +45,13 @@
     function addBird($db, $birdid)
     {
     	/*$birdentry = htmlspecialchars('$_POST['birdid']');*/
-    	$statement = $db->prepare('UPDATE Sighting SET Sighting.birdid = Bird.birdid FROM Sighting INNER JOIN Bird ON Sighting.birdid = Bird.birdid WHERE Bird.birdname = :birdid');
-    	$statement->execute(array(':birdid' => $birdid));
+    	/*$statement = $db->prepare('UPDATE Sighting SET Sighting.birdid = Bird.birdid FROM Sighting INNER JOIN Bird ON Sighting.birdid = Bird.birdid WHERE Bird.birdname = :birdid');
+    	$statement->execute(array(':birdid' => $birdid));*/
     }
 
     if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     	insertLog($db, $_POST['birdid'], $_POST['city'], $_POST['state'], $_POST['country'], $_POST['sighttime']);
-    	addBird($db, $_POST['birdid']);
+    	/*addBird($db, $_POST['birdid']);*/
     }
 
 ?>
