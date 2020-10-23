@@ -36,7 +36,6 @@
 					$_POST['birdid'] = $row['birdid'];
 				}
 			}
-			echo $_POST['memberid'];
 		}
 		if (isset($_POST['memberid'])) {
 			foreach ($db->query('SELECT username, memberid FROM Member') as $rows)
@@ -45,6 +44,7 @@
 					$_POST['memberid'] = $rows['memberid'];
 				}
 			}
+			echo $_POST['memberid'];
 		}
     	insertLog($db, $_POST['memberid'], $_POST['birdid'], $_POST['city'], $_POST['state'], $_POST['country'], $_POST['sighttime']);
     }
