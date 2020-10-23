@@ -38,8 +38,8 @@
 			}
 		}*/
 
-    	$statement = $db->prepare('INSERT INTO Sighting(City, State, Country, SightTime) VALUES(:city, :state, :country, :sighttime)');
-		$statement->execute(array(':city' => $city, ':state' => $state, ':country' => $country, ':sighttime' => $sighttime));
+    	$statement = $db->prepare('INSERT INTO Sighting(BirdId, City, State, Country, SightTime) VALUES(:birdid, :city, :state, :country, :sighttime)');
+		$statement->execute(array(':birdid' => $birdid, ':city' => $city, ':state' => $state, ':country' => $country, ':sighttime' => $sighttime));
     }
 
     function addBird($db, $birdid)
@@ -57,12 +57,9 @@
 				if ($row['birdname'] == $_POST['birdid']) {
 					$_POST['birdid'] = $row['birdid'];
 				}
-
 			}
-			echo $_POST['birdid'];
 		}
     	insertLog($db, $_POST['birdid'], $_POST['city'], $_POST['state'], $_POST['country'], $_POST['sighttime']);
-    	echo $_POST['birdid'];
     	/*addBird($db, $_POST['birdid']);*/
     }
 
