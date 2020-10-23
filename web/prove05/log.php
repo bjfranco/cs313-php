@@ -45,7 +45,9 @@
 			}
 		}
     	insertLog($db, $_POST['memberid'], $_POST['birdid'], $_POST['city'], $_POST['state'], $_POST['country'], $_POST['sighttime']);
-    	alert("Log Added");
+
+    	$message = "Log Added";
+		echo "<script type='text/javascript'>alert('$message');</script>";
     }
 
 ?>
