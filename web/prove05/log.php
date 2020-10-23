@@ -37,11 +37,11 @@
 				}
 			}
 		}
-		if (isset($_POST['username'])) {
+		if (isset($_POST['memberid'])) {
 			foreach ($db->query('SELECT username, memberid FROM Member') as $rows)
 			{
-				if ($rows['username'] == $_POST['username']) {
-					$_POST['username'] = $rows['memberid'];
+				if ($rows['username'] == $_POST['memberid']) {
+					$_POST['memberid'] = $rows['memberid'];
 				}
 			}
 		}
