@@ -51,6 +51,16 @@
 
 
     if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+    	if (isset($_POST['birdid'])) {
+			foreach ($db->query('SELECT birdid, birdname FROM Bird') as $row)
+			{
+				if ($row['birdname'] == $_POST['birdid']) {
+					$_POST['birdid'] = $row['birdid'];
+				}
+
+			}
+			echo $_POST['birdid'];
+		}
     	insertLog($db, $_POST['birdid'], $_POST['city'], $_POST['state'], $_POST['country'], $_POST['sighttime']);
     	echo $_POST['birdid'];
     	/*addBird($db, $_POST['birdid']);*/
@@ -98,16 +108,7 @@
 		</form>
 
 		<?php
-		if (isset($_POST['birdid'])) {
-			foreach ($db->query('SELECT birdid, birdname FROM Bird') as $row)
-			{
-				if ($row['birdname'] == $_POST['birdid']) {
-					$_POST['birdid'] = $row['birdid'];
-				}
 
-			}
-			echo $_POST['birdid'];
-		}
 		?>
 	</div>
 
