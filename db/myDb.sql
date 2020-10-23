@@ -9,6 +9,9 @@ CREATE TABLE Bird (
 	BirdName varchar(80) NOT NULL
 );
 
+ALTER TABLE Bird
+ADD UNIQUE (BirdName);
+
 CREATE TABLE Sighting (
 	SightingId serial NOT NULL PRIMARY KEY,
 	MemberId int REFERENCES Member(MemberId),
