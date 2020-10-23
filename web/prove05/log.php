@@ -21,17 +21,22 @@
     die();
     } 
 
-    function insertLog($db, $bird, $city, $state, $country, $sighttime)
+    function insertLog($db, $birdid, $city, $state, $country, $sighttime)
     {
     	/*$stmt = $db->query('SELECT birdid FROM Bird WHERE birdname=' . $_POST['bird'] . '') AS $birdid;
     	$stmt->execute(array(':birdid' = $birdid));*/
+
+    	$stmt = $db->prepare('SELECT birdname FROM Bird WHERE birdid=:birdid');
+		$stmt->bindValue(':birdid', $birdid, PDO::PARAM_INT);
+		$stmt->execute();
+		$rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
     	$statement = $db->prepare('INSERT INTO Sighting(City, State, Country, SightTime) VALUES(:city, :state, :country, :sighttime)');
 		$statement->execute(array(':city' => $city, ':state' => $state, ':country' => $country, ':sighttime' => $sighttime));
     }
 
     if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-    	insertLog($db, $_POST['bird'], $_POST['city'], $_POST['state'], $_POST['country'], $_POST['sighttime']);
+    	insertLog($db, $_POST['birdid'], $_POST['city'], $_POST['state'], $_POST['country'], $_POST['sighttime']);
     }
 
 ?>
@@ -56,8 +61,8 @@
 		<p>Log your recent bird sighting below:</p>
 
 		<form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post">
-			<label for="bird">Bird Name:</label><br>
-			<input type="text" name="bird" id="bird" placeholder="Blue Jay"><br>
+			<label for="birdid">Bird Name:</label><br>
+			<input type="text" name="birdid" id="birdid" placeholder="Blue Jay"><br>
 
 			<label for="city">City:</label><br>
 			<input type="text" name="city" id="city" placeholder="Los Angelos"><br>
