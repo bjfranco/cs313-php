@@ -21,11 +21,11 @@
     die();
     } 
 
-    function insertLog($db, $birdid, $username, $city, $state, $country, $sighttime)
+    function insertLog($db, $birdid, $memberid, $city, $state, $country, $sighttime)
     {
 
-    	$statement = $db->prepare('INSERT INTO Sighting(MemberId, BirdId, City, State, Country, SightTime) VALUES(:username :birdid, :city, :state, :country, :sighttime)');
-		$statement->execute(array(':username' => $username, ':birdid' => $birdid, ':city' => $city, ':state' => $state, ':country' => $country, ':sighttime' => $sighttime));
+    	$statement = $db->prepare('INSERT INTO Sighting(MemberId, BirdId, City, State, Country, SightTime) VALUES(:memberid :birdid, :city, :state, :country, :sighttime)');
+		$statement->execute(array(':memberid' => $memberid, ':birdid' => $birdid, ':city' => $city, ':state' => $state, ':country' => $country, ':sighttime' => $sighttime));
     }
 
     if ($_SERVER['REQUEST_METHOD'] == 'POST') {
@@ -45,7 +45,7 @@
 				}
 			}
 		}
-    	insertLog($db, $_POST['username'], $_POST['birdid'], $_POST['city'], $_POST['state'], $_POST['country'], $_POST['sighttime']);
+    	insertLog($db, $_POST['memberid'], $_POST['birdid'], $_POST['city'], $_POST['state'], $_POST['country'], $_POST['sighttime']);
     }
 
 ?>
@@ -70,8 +70,8 @@
 		<p>Log your recent bird sighting below:</p>
 
 		<form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post">
-			<label for="username">Username:</label><br>
-			<input type="text" name="username" id="username" placeholder="user123"><br>
+			<label for="memberid">Username:</label><br>
+			<input type="text" name="memberid" id="memberid" placeholder="user123"><br>
 
 			<label for="birdid">Bird Name:</label><br>
 			<input type="text" name="birdid" id="birdid" placeholder="Blue Jay"><br>
