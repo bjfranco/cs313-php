@@ -33,8 +33,8 @@
 
 		foreach ($db->query('SELECT Bird.birdname FROM Sighting INNER JOIN Bird ON Bird.birdid = Sighting.birdid') as $row)
 		{
-			if ($row == $_POST['birdid']) {
-				$birdid = $_POST['birdid'];
+			if ($row == $birdid) {
+				$birdid = 'birdid';
 			}
 		}
 
