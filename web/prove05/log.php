@@ -26,10 +26,10 @@
     	/*$stmt = $db->query('SELECT birdid FROM Bird WHERE birdname=' . $_POST['bird'] . '') AS $birdid;
     	$stmt->execute(array(':birdid' = $birdid));*/
 
-    	$stmt = $db->prepare('SELECT birdname FROM Bird WHERE birdid=:birdid');
+    	/*$stmt = $db->prepare('SELECT birdname FROM Bird WHERE birdid=:birdid');
 		$stmt->bindValue(':birdid', $birdid, PDO::PARAM_INT);
 		$stmt->execute();
-		$rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
+		$rows = $stmt->fetchAll(PDO::FETCH_ASSOC);*/
 
     	$statement = $db->prepare('INSERT INTO Sighting(City, State, Country, SightTime) VALUES(:city, :state, :country, :sighttime)');
 		$statement->execute(array(':city' => $city, ':state' => $state, ':country' => $country, ':sighttime' => $sighttime));
