@@ -31,15 +31,15 @@
 		$stmt->execute();
 		$rows = $stmt->fetchAll(PDO::FETCH_ASSOC);*/
 
-		foreach ($db->query('SELECT Bird.birdname FROM Sighting INNER JOIN Bird ON Bird.birdid = Sighting.birdid') as $row)
+		/*foreach ($db->query('SELECT Bird.birdname FROM Sighting INNER JOIN Bird ON Bird.birdid = Sighting.birdid') as $row)
 		{
 			if ($row == $birdid) {
 				$birdid = 'birdid';
 			}
-		}
+		}*/
 
-    	$statement = $db->prepare('INSERT INTO Sighting(BirdId, City, State, Country, SightTime) VALUES(:birdid, :city, :state, :country, :sighttime)');
-		$statement->execute(array(':birdid' => $birdid, ':city' => $city, ':state' => $state, ':country' => $country, ':sighttime' => $sighttime));
+    	$statement = $db->prepare('INSERT INTO Sighting(City, State, Country, SightTime) VALUES(:city, :state, :country, :sighttime)');
+		$statement->execute(array(':city' => $city, ':state' => $state, ':country' => $country, ':sighttime' => $sighttime));
     }
 
     if ($_SERVER['REQUEST_METHOD'] == 'POST') {
