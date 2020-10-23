@@ -31,6 +31,13 @@
 		$stmt->execute();
 		$rows = $stmt->fetchAll(PDO::FETCH_ASSOC);*/
 
+		foreach ($db->query('SELECT Bird.birdname FROM Sighting INNER JOIN Bird ON Bird.birdid = Sighting.birdid') as $row)
+		{
+			if ($row == $_POST['birdid']) {
+				$birdid = $_POST['birdid'];
+			}
+		}
+
     	$statement = $db->prepare('INSERT INTO Sighting(City, State, Country, SightTime) VALUES(:city, :state, :country, :sighttime)');
 		$statement->execute(array(':city' => $city, ':state' => $state, ':country' => $country, ':sighttime' => $sighttime));
     }
