@@ -21,11 +21,11 @@
     die();
     } 
 
-    function insertLog($db, $birdid, $city, $state, $country, $sighttime)
+    function insertLog($db, $birdid, $username, $city, $state, $country, $sighttime)
     {
 
-    	$statement = $db->prepare('INSERT INTO Sighting(BirdId, City, State, Country, SightTime) VALUES(:birdid, :city, :state, :country, :sighttime)');
-		$statement->execute(array(':birdid' => $birdid, ':city' => $city, ':state' => $state, ':country' => $country, ':sighttime' => $sighttime));
+    	$statement = $db->prepare('INSERT INTO Sighting(MemberId, BirdId, City, State, Country, SightTime) VALUES(:username :birdid, :city, :state, :country, :sighttime)');
+		$statement->execute(array(':username' => $username, ':birdid' => $birdid, ':city' => $city, ':state' => $state, ':country' => $country, ':sighttime' => $sighttime));
     }
 
     if ($_SERVER['REQUEST_METHOD'] == 'POST') {
@@ -37,7 +37,15 @@
 				}
 			}
 		}
-    	insertLog($db, $_POST['birdid'], $_POST['city'], $_POST['state'], $_POST['country'], $_POST['sighttime']);
+		if (isset($_POST['username'])) {
+			foreach ($db->query('SELECT username, memberid FROM Member') as $rows)
+			{
+				if ($rows['username'] == $_POST['username']) {
+					$_POST['username'] = $rows['memberid'];
+				}
+			}
+		}
+    	insertLog($db, $_POST['username'], $_POST['birdid'], $_POST['city'], $_POST['state'], $_POST['country'], $_POST['sighttime']);
     }
 
 ?>
