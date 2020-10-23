@@ -45,7 +45,7 @@
     function addBird($db, $birdid)
     {
     	$birdentry = htmlspecialchars('$_POST['birdid']');
-    	$stmt = $db->prepare('UPDATE Sighting SET Sighting.birdid = Bird.birdid WHERE Bird.birdname = $birdid');
+    	/*$stmt = $db->prepare('UPDATE Sighting SET Sighting.birdid = Bird.birdid WHERE Bird.birdname = $birdid');*/
     	/*$stmt->execute(array(':birdid' => $birdid));*/
     }
 
