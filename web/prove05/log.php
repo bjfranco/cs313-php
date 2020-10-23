@@ -23,10 +23,11 @@
 
     function insertLog($db, $bird, $city, $state, $country, $sighttime)
     {
-    	$statement = $db->query('SELECT birdid FROM Bird WHERE birdname=' . $_POST['bird'] . '') AS $birdid;
+    	$stmt = $db->query('SELECT birdid FROM Bird WHERE birdname=' . $_POST['bird'] . '') AS $birdid;
+    	$stmt->execute(array(':birdid' = $birdid));
 
     	$statement = $db->prepare('INSERT INTO Sighting(BirdId, City, State, Country, SightTime) VALUES(:birdid, :city, :state, :country, :sighttime)');
-		$statement->execute(array(':birdid' = $birdid, ':city' => $city, ':state' => $state, ':country' => $country, ':sighttime' => $sighttime));
+		$statement->execute(array(':city' => $city, ':state' => $state, ':country' => $country, ':sighttime' => $sighttime));
     }
 
     if ($_SERVER['REQUEST_METHOD'] == 'POST') {
