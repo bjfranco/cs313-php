@@ -46,7 +46,7 @@
     {
     	$birdentry = htmlspecialchars('$_POST['birdid']');
     	$stmt = $db->prepare('UPDATE Sighting SET Sighting.birdid = Bird.birdid WHERE Bird.birdname = $birdid');
-    	$stmt->execute(array(':birdid' => $birdid));
+    	/*$stmt->execute(array(':birdid' => $birdid));*/
     }
 
     if ($_SERVER['REQUEST_METHOD'] == 'POST') {
