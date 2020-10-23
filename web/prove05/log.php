@@ -94,6 +94,17 @@
 			<input type="submit" name="submit" value="Submit"><br>
 			
 		</form>
+
+		<?php
+		if (isset($_POST['birdid'])) {
+			foreach ($db->query('SELECT birdid, birdname FROM Bird') as $row)
+			{
+				if ($row['birdname'] == $_POST['birdid']) {
+					$_POST['birdid'] = $row['birdid'];
+				}
+			}
+		}
+		?>
 	</div>
 
 </body>
