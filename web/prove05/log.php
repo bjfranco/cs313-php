@@ -45,8 +45,8 @@
     function addBird($db, $birdid)
     {
     	/*$birdentry = htmlspecialchars('$_POST['birdid']');*/
-    	$stmt = $db->prepare('UPDATE Sighting SET Sighting.birdid = Bird.birdid FROM Sighting INNER JOIN Bird ON Sighting.birdid = Bird.birdid WHERE Bird.birdname = $birdid');
-    	$stmt->execute();
+    	$stmt = $db->prepare('UPDATE Sighting SET Sighting.birdid = Bird.birdid FROM Sighting INNER JOIN Bird ON Sighting.birdid = Bird.birdid WHERE Bird.birdname = :birdid');
+    	$stmt->execute(array(':birdid' => $birdid));
     }
 
     if ($_SERVER['REQUEST_METHOD'] == 'POST') {
