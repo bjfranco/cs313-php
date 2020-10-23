@@ -23,9 +23,8 @@
 
     function insertLog($db, $memberid, $birdid, $city, $state, $country, $sighttime)
     {
-
-    	$statement = $db->prepare('INSERT INTO Sighting(BirdId, City, State, Country, SightTime) VALUES(:birdid, :city, :state, :country, :sighttime)');
-		$statement->execute(array(':birdid' => $birdid, ':city' => $city, ':state' => $state, ':country' => $country, ':sighttime' => $sighttime));
+    	$statement = $db->prepare('INSERT INTO Sighting(MemberId, BirdId, City, State, Country, SightTime) VALUES(:memberid, :birdid, :city, :state, :country, :sighttime)');
+		$statement->execute(array(':memberid' => $memberid, ':birdid' => $birdid, ':city' => $city, ':state' => $state, ':country' => $country, ':sighttime' => $sighttime));
     }
 
     if ($_SERVER['REQUEST_METHOD'] == 'POST') {
