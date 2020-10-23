@@ -62,6 +62,9 @@
 		<p>Log your recent bird sighting below:</p>
 
 		<form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post">
+			<label for="username">Username:</label><br>
+			<input type="text" name="username" id="username" placeholder="user123"><br>
+
 			<label for="birdid">Bird Name:</label><br>
 			<input type="text" name="birdid" id="birdid" placeholder="Blue Jay"><br>
 
