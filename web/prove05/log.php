@@ -49,8 +49,10 @@
     	$statement->execute(array(':birdid' => $birdid));*/
     }
 
+
     if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     	insertLog($db, $_POST['birdid'], $_POST['city'], $_POST['state'], $_POST['country'], $_POST['sighttime']);
+    	echo $_POST['birdid'];
     	/*addBird($db, $_POST['birdid']);*/
     }
 
