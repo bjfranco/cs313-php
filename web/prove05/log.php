@@ -43,9 +43,9 @@
 					$_POST['memberid'] = $rows['memberid'];
 				}
 			}
-			echo $_POST['memberid'];
 		}
     	insertLog($db, $_POST['memberid'], $_POST['birdid'], $_POST['city'], $_POST['state'], $_POST['country'], $_POST['sighttime']);
+    	alert("Log Added");
     }
 
 ?>
