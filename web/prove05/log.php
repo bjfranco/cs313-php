@@ -75,28 +75,54 @@
 			<div class="leftcol">
 				<label for="memberid">Username:</label><br>
 			</div>
-			
 			<div class="rightcol">
 				<input type="text" name="memberid" id="memberid" placeholder="user123"><br>
 			</div>
 			
 
-			<label for="birdid">Bird Name:</label><br>
-			<input type="text" name="birdid" id="birdid" placeholder="Blue Jay"><br>
+			<div class="leftcol">
+				<label for="birdid">Bird Name:</label><br>
+			</div>
+			<div class="rightcol">
+				<input type="text" name="birdid" id="birdid" placeholder="Blue Jay"><br>
+			</div>
+			
 
-			<label for="city">City:</label><br>
-			<input type="text" name="city" id="city" placeholder="Los Angelos"><br>
+			<div class="leftcol">
+				<label for="city">City:</label><br>
+			</div>
+			<div class="rightcol">
+				<input type="text" name="city" id="city" placeholder="Los Angelos"><br>
+			</div>
+			
 
-			<label for="state">State:</label><br>
-			<input type="text" name="state" id="state" placeholder="California"><br>
+			<div class="leftcol">
+				<label for="state">State:</label><br>
+			</div>
+			<div class="rightcol">
+				<input type="text" name="state" id="state" placeholder="California"><br>
+			</div>
+			
 
-			<label for="country">Country:</label><br>
-			<input type="text" name="country" id="country" placeholder="United States"><br>
+			<div class="leftcol">
+				<label for="country">Country:</label><br>
+			</div>
+			<div class="rightcol">
+				<input type="text" name="country" id="country" placeholder="United States"><br>
+			</div>
+			
 
-			<label for="sighttime">Date:</label><br>
-			<input type="text" name="sighttime" id="sighttime" placeholder="YYYY-MM-DD"><br>
+			<div class="leftcol">
+				<label for="sighttime">Date:</label><br>
+			</div>
+			<div class="rightcol">
+				<input type="text" name="sighttime" id="sighttime" placeholder="YYYY-MM-DD"><br>
+			</div>
+			
 
-			<input type="submit" name="submit" value="Submit"><br>
+			<div class="rightcol">
+				<input type="submit" name="submit" value="Submit"><br>
+			</div>
 			
 		</form>
 	</div>
