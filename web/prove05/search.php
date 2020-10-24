@@ -54,7 +54,7 @@
 				?>
 
 				<br>
-				<input type="submit" name="submit" value="Search">
+				<input class="log" type="submit" name="submit" value="Search">
 
 			</select>
 
