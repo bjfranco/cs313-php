@@ -61,6 +61,11 @@
   	padding: 25px;
 }
 
+.log h2, p{
+	text-align: center;
+	justify-content: center;
+}
+
 .leftcol{
 	float: left;
   	width: 25%;
