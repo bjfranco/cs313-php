@@ -73,7 +73,7 @@
 		<p>Select the "Log" tab to log a new bird sighting.</p>
 	</div>
 
-	<div class="adduser">
+	<div class="log">
 		<h3>Create User Profle:</h3>
 		<form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post">
 			<label for="username">Username:</label><br>
