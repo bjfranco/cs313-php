@@ -35,10 +35,10 @@
 		  if ($row['username'] == $_POST['username']) {
 		  	$message = "Error: Username Already Taken";
 			echo "<script type='text/javascript'>alert('$message');</script>";
-			$check = false;
+			$check = 'false';
 		  }
 		}
-		if ($check != false) {
+		if ($check != 'false') {
 			addUser($db, $_POST['username'], $_POST['firstname'], $_POST['lastname']);
 			$message = "User Added";
 			echo "<script type='text/javascript'>alert('$message');</script>";
