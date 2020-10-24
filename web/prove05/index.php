@@ -83,7 +83,7 @@
 			<input type="text" name="firstname" id="firstname" placeholder="John"><br>
 
 			<label for="lastname">Last Name:</label><br>
-			<input type="text" name="lastname" id="lastname" placeholder="Smith"><br>
+			<input type="text" name="lastname" id="lastname" placeholder="Smith"><br><br><br>
 
 			<input type="submit" name="submit"><br>
 		</form>
