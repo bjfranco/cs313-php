@@ -87,13 +87,29 @@
 				</select>
 			</div>
 
+			<div class="leftcol">
+				<label for="memberid">Username:</label><br>
+			</div>
+			<div class="rightcol">
+				<select name="memberid" id="memberid">
+					
+					<?php
+					foreach ($db->query('SELECT username FROM Member') as $row)
+					{
+						echo '<option value="' . $row['username'] . '">' . $row['username'] . '</option>';
+					}
+					?>
+				</select>
+			</div>
 
+<!--
 			<div class="leftcol">
 				<label for="memberid">Username:</label><br>
 			</div>
 			<div class="rightcol">
 				<input type="text" name="memberid" id="memberid" placeholder="user123"><br>
 			</div>
+		-->
 			
 <!--
 			<div class="leftcol">
