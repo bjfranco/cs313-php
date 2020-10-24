@@ -86,6 +86,14 @@
   resize: vertical;
 }
 
+.log input[type=submit]{
+	background-color: red;
+	color: white;
+	padding: 15px 20px;
+	border-radius: 5px;
+	cursor: pointer;
+}
+
 
 
 
