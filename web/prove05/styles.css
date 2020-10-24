@@ -73,6 +73,14 @@
   	margin-top: 6px;
 }
 
+.log input[type=text]{
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+}
+
 
 
 
