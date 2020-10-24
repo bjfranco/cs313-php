@@ -1,3 +1,41 @@
+<?php
+	try
+    {
+    $dbUrl = getenv('DATABASE_URL');
+    
+    $dbOpts = parse_url($dbUrl);
+    
+    $dbHost = $dbOpts["host"];
+    $dbPort = $dbOpts["port"];
+    $dbUser = $dbOpts["user"];
+    $dbPassword = $dbOpts["pass"];
+    $dbName = ltrim($dbOpts["path"],'/');
+    
+    $db = new PDO("pgsql:host=$dbHost;port=$dbPort;dbname=$dbName", $dbUser, $dbPassword);
+    
+    $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    }
+    catch (PDOException $ex)
+    {
+    echo 'Error!: ' . $ex->getMessage();
+    die();
+    } 
+
+    function addUser($db, $username, $firstname, $lastname)
+    {
+	    $stmt = $db->prepare('INSERT INTO Member(UserName, FirstName, LastName) VALUES(:username, :firstname, :lastname)');
+		$stmt->execute(array(':username' => $username, ':firstname' => $firstname, ':lastname' => $lastname));
+		$rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
+    }
+
+
+    if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+    	insertLog($db, $_POST['username'], $_POST['firstname'], $_POST['lastname']);
+
+    	$message = "User Added";
+		echo "<script type='text/javascript'>alert('$message');</script>";
+    }
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -18,6 +56,22 @@
 		<h2>Welcome to Bird Watcher!</h2>
 		<p>Select the "Search" tab to search for a bird sighting.</p>
 		<p>Select the "Log" tab to log a new bird sighting.</p>
+	</div>
+
+	<div class="adduser">
+		<h3>Create User Profle:</h3>
+		<form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post">
+			<label for="username">Username:</label><br>
+			<input type="text" name="username" id="username" placeholder="user123"><br>
+
+			<label for="firstname">First Name:</label><br>
+			<input type="text" name="firstname" id="firstname" placeholder="John"><br>
+
+			<label for="lastname">Last Name:</label><br>
+			<input type="text" name="lastname" id="lastname" placeholder="Smith"><br>
+
+			<input type="submit" name="submit"><br>
+		</form>
 	</div>
 
 </body>
