@@ -32,8 +32,7 @@
     {
 		foreach ($db->query('SELECT username FROM Member') as $row)
 		{
-			echo $row;
-		  if ($row == $_POST['username']) {
+		  if ($row['username'] == $_POST['username']) {
 		  	$message = "Error: Username Already Taken";
 			echo "<script type='text/javascript'>alert('$message');</script>";
 			$check = false;
