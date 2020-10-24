@@ -28,12 +28,27 @@
 		$rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
     }
 
+    function checkUser($db, $username)
+    {
+		foreach ($db->query('SELECT username FROM Member') as $row)
+		{
+		  if ($row == $_POST['username']) {
+		  	$message = "Error: Username Already Taken";
+			echo "<script type='text/javascript'>alert('$message');</script>";
+			$check = false;
+		  }
+		}
+		if ($check != false) {
+			addUser($db, $_POST['username'], $_POST['firstname'], $_POST['lastname']);
+			$message = "User Added";
+			echo "<script type='text/javascript'>alert('$message');</script>";
+		}
+    }
+
 
     if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-    	addUser($db, $_POST['username'], $_POST['firstname'], $_POST['lastname']);
-
-    	$message = "User Added";
-		echo "<script type='text/javascript'>alert('$message');</script>";
+    	checkUser($db, $_POST['username']);
+    	
     }
 ?>
 <!DOCTYPE html>
