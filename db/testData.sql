@@ -47,20 +47,20 @@ VALUES('Flamingo');
 
 /*MEMBER*/
 
-INSERT INTO Member(firstname, lastname)
-VALUES('Brig', 'Francois');
+INSERT INTO Member(username, firstname, lastname)
+VALUES('bfrancois', 'Brig', 'Francois');
 
-INSERT INTO Member(firstname, lastname)
-VALUES('Victoria', 'Francois');
+INSERT INTO Member(username, firstname, lastname)
+VALUES('vfrancois', 'Victoria', 'Francois');
 
-INSERT INTO Member(firstname, lastname)
-VALUES('Jane', 'Francois');
+INSERT INTO Member(username, firstname, lastname)
+VALUES('tootie', 'Jane', 'Francois');
 
-INSERT INTO Member(firstname, lastname)
-VALUES('John', 'Smith');
+INSERT INTO Member(username, firstname, lastname)
+VALUES('jjsmith', 'John', 'Smith');
 
-INSERT INTO Member(firstname, lastname)
-VALUES('Devin', 'Booker');
+INSERT INTO Member(username, firstname, lastname)
+VALUES('dbook', 'Devin', 'Booker');
 
 /*SIGHTING*/
 
@@ -93,3 +93,9 @@ INNER JOIN Bird
 ON Sighting.birdid=Bird.birdid
 WHERE Sighting.country='Canada';
 
+
+/*SIGHTING*/
+INSERT INTO Sighting(memberid, birdid, city, state, country, sighttime)
+VALUES((SELECT memberid FROM Member WHERE firstname = 'Victoria' AND lastname = 'Francois'), (SELECT birdid FROM Bird WHERE birdname = 'Blue Jay'),'test', 'test', 'test', '2020-10-22');
+
+DELETE FROM Sighting WHERE city = 'Mesa';

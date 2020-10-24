@@ -67,13 +67,19 @@
 		</ul>
 	</header>
 
-	<div id="search">
+	<div id="log">
 		<h2>Log Bird Sighting</h2>
 		<p>Log your recent bird sighting below:</p>
 
 		<form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post">
-			<label for="memberid">Username:</label><br>
-			<input type="text" name="memberid" id="memberid" placeholder="user123"><br>
+			<div class="leftcol">
+				<label for="memberid">Username:</label><br>
+			</div>
+			
+			<div class="rightcol">
+				<input type="text" name="memberid" id="memberid" placeholder="user123"><br>
+			</div>
+			
 
 			<label for="birdid">Bird Name:</label><br>
 			<input type="text" name="birdid" id="birdid" placeholder="Blue Jay"><br>

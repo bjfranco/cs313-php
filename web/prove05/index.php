@@ -14,7 +14,7 @@
 		</ul>
 	</header>
 
-	<div>
+	<div class="home">
 		<h2>Welcome to Bird Watcher!</h2>
 		<p>Select the "Search" tab to search for a bird sighting.</p>
 		<p>Select the "Log" tab to log a new bird sighting.</p>

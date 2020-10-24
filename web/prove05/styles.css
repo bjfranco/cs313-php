@@ -27,6 +27,10 @@
  	background-color: red;
 }
 
+.home{
+
+}
+
 .search{
   	justify-content: center;
   	align-items: center;
@@ -49,3 +53,28 @@
 	padding: 10px;
 	border-collapse: collapse;
 }
+
+
+.log{
+	border-radius: 5px;
+ 	background-color: #f2f2f2;
+  	padding: 25px;
+}
+
+.leftcol{
+	float: left;
+  	width: 25%;
+  	margin-top: 6px;
+}
+
+.rightcol{
+	float: left;
+  	width: 75%;
+  	margin-top: 6px;
+}
+
+
+
+
+
+
