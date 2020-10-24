@@ -72,6 +72,17 @@
 		<p>Log your recent bird sighting below:</p>
 
 		<form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post">
+			<select name="birdid" id="birdid">
+				
+				<?php
+				foreach ($db->query('SELECT birdname FROM Bird') as $row)
+				{
+					echo '<option value="' . $row['birdname'] . '">' . $row['birdname'] . '</option>';
+				}
+				?>
+			</select>
+
+
 			<div class="leftcol">
 				<label for="memberid">Username:</label><br>
 			</div>
@@ -79,13 +90,14 @@
 				<input type="text" name="memberid" id="memberid" placeholder="user123"><br>
 			</div>
 			
-
+<!--
 			<div class="leftcol">
 				<label for="birdid">Bird Name:</label><br>
 			</div>
 			<div class="rightcol">
 				<input type="text" name="birdid" id="birdid" placeholder="Blue Jay"><br>
 			</div>
+		-->
 			
 
 			<div class="leftcol">
