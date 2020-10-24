@@ -30,7 +30,7 @@
 
 
     if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-    	insertLog($db, $_POST['username'], $_POST['firstname'], $_POST['lastname']);
+    	addUser($db, $_POST['username'], $_POST['firstname'], $_POST['lastname']);
 
     	$message = "User Added";
 		echo "<script type='text/javascript'>alert('$message');</script>";
