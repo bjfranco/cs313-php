@@ -74,6 +74,8 @@
 		<form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post">
 			<div class="leftcol">
 				<label for="birdid">Bird Name:</label><br>
+			</div>
+			<div class="rightcol">
 				<select name="birdid" id="birdid">
 					
 					<?php
@@ -84,7 +86,7 @@
 					?>
 				</select>
 			</div>
-			
+
 
 			<div class="leftcol">
 				<label for="memberid">Username:</label><br>
