@@ -67,7 +67,7 @@
 		</ul>
 	</header>
 
-	<div id="log">
+	<div class="log">
 		<h2>Log Bird Sighting</h2>
 		<p>Log your recent bird sighting below:</p>
 
