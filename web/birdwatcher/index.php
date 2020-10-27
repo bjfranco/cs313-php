@@ -44,10 +44,9 @@
 	<title>Bird Watcher</title>
 </head>
 <body>
-
-<?php
-	include 'navbar.php';
-?>
+	<?php
+		include 'navbar.php';
+	?>
 
 	<div class="home">
 		<h2>Welcome to Bird Watcher!</h2>
