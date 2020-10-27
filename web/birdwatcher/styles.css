@@ -1,0 +1,105 @@
+.nav{
+	background-color: #333;
+	color: white;
+	list-style-type: none;
+	overflow: hidden;
+}
+
+.nav li{
+	float: right;
+	list-style-type: none;
+}
+
+.nav h1{
+	text-align: center;
+}
+
+.nav li a{
+	color: white;
+	text-decoration: none;
+	display: block;
+	text-align: right;
+	padding: 14px 16px;
+	font-size: 20px;
+}
+
+.nav li a:hover{
+ 	background-color: red;
+}
+
+.home{
+	justify-content: center;
+  	align-items: center;
+	text-align: center;
+}
+
+.search{
+  	justify-content: center;
+  	align-items: center;
+	text-align: center;
+}
+
+.table{
+  	justify-content: center;
+  	align-items: center;
+	text-align: center;
+}
+
+.table table{
+	margin-left: auto;
+  	margin-right: auto;
+}
+
+.table table, th, td{
+	border: 1px solid black;
+	padding: 10px;
+	border-collapse: collapse;
+}
+
+
+.log{
+	border-radius: 5px;
+ 	background-color: #f2f2f2;
+  	padding: 25px;
+}
+
+.log h2, p{
+	text-align: center;
+	justify-content: center;
+}
+
+.leftcol{
+	float: left;
+  	width: 25%;
+  	margin-top: 6px;
+}
+
+.rightcol{
+	float: left;
+  	width: 75%;
+  	margin-top: 6px;
+}
+
+.log input[type=text], select{
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+}
+
+.log input[type=submit]{
+	background-color: red;
+	color: white;
+	padding: 15px 20px;
+	border-radius: 5px;
+	cursor: pointer;
+	border: none;
+	width: 25%;
+}
+
+
+
+
+
+
