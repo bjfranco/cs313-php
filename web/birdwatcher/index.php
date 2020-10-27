@@ -1,6 +1,11 @@
 <?php
+	// start the session
+	session_start();
+
+	// connect to database
 	require 'dbconnect.php';
 
+	// add user function
     function addUser($db, $username, $firstname, $lastname)
     {
 	    $stmt = $db->prepare('INSERT INTO Member(UserName, FirstName, LastName) VALUES(:username, :firstname, :lastname)');
@@ -8,8 +13,10 @@
 		$rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
     }
 
+    // check user function
     function checkUser($db, $username)
     {
+    	// check if the user already exists.
 		foreach ($db->query('SELECT username FROM Member') as $row)
 		{
 		  if ($row['username'] == $_POST['username']) {
@@ -25,10 +32,9 @@
 		}
     }
 
-
+    // run our functions to add a user
     if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     	checkUser($db, $_POST['username']);
-    	
     }
 ?>
 <!DOCTYPE html>

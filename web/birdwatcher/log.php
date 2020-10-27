@@ -1,4 +1,8 @@
 <?php
+	// start the session
+	session_start();
+
+	// connect to database
 	require 'dbconnect.php';
 
     function insertLog($db, $memberid, $birdid, $city, $state, $country, $sighttime)

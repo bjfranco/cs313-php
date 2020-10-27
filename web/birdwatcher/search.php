@@ -1,4 +1,8 @@
 <?php
+	// start the session
+	session_start();
+
+	// connect to database
 	require 'dbconnect.php';
 ?>
 <!DOCTYPE html>
@@ -16,7 +20,7 @@
 			<li><a href="index.php">Home</a></li>
 		</ul>
 	</header>
-	
+
 	<div class="search">
 		<h2>Bird Search</h2><br>
 		<p>Select the bird you are looking for and a record will be displayed showing where and when this bird has been seen.</p>
