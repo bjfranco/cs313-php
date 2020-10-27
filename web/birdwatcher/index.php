@@ -1,5 +1,4 @@
 <?php
-
 	require 'dbconnect.php';
 
     function addUser($db, $username, $firstname, $lastname)
