@@ -61,14 +61,26 @@
 		<div class="user">
 			<h3>Create User Profile</h3>
 			<form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post">
-				<label for="username">Username:</label><br>
-				<input type="text" name="username" id="username" placeholder="user123"><br>
+				<div class="leftcol">
+					<label for="username">Username:</label><br>
+				</div>
+				<div class="rightcol">
+					<input type="text" name="username" id="username" placeholder="user123"><br>
+				</div>
 
-				<label for="firstname">First Name:</label><br>
-				<input type="text" name="firstname" id="firstname" placeholder="John"><br>
+				<div class="leftcol">
+					<label for="firstname">First Name:</label><br>
+				</div>
+				<div class="rightcol">
+					<input type="text" name="firstname" id="firstname" placeholder="John"><br>
+				</div>
 
-				<label for="lastname">Last Name:</label><br>
-				<input type="text" name="lastname" id="lastname" placeholder="Smith"><br><br><br>
+				<div class="leftcol">
+					<label for="lastname">Last Name:</label><br>
+				</div>
+				<div class="rightcol">
+					<input type="text" name="lastname" id="lastname" placeholder="Smith"><br><br><br>
+				</div>
 
 				<input type="submit" name="submit"><br>
 			</form>
