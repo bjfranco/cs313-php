@@ -67,21 +67,21 @@
 					<label for="username">Username:</label><br>
 				</div>
 				<div class="rightcol">
-					<input type="text" name="username" id="username" placeholder="user123" required><br>
+					<input type="text" name="username" id="username" placeholder="jsmith" required><br>
 				</div>
 
 				<div class="leftcol">
 					<label for="firstname">First Name:</label><br>
 				</div>
 				<div class="rightcol">
-					<input type="text" name="firstname" id="firstname" placeholder="John"><br>
+					<input type="text" name="firstname" id="firstname" placeholder="John" required><br>
 				</div>
 
 				<div class="leftcol">
 					<label for="lastname">Last Name:</label><br>
 				</div>
 				<div class="rightcol">
-					<input type="text" name="lastname" id="lastname" placeholder="Smith"><br><br><br>
+					<input type="text" name="lastname" id="lastname" placeholder="Smith" required><br><br><br>
 				</div>
 
 				<input type="submit" name="submit"><br>
