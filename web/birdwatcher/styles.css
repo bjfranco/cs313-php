@@ -52,6 +52,8 @@ header h1{
  	background-color: #01E5A7;
 }
 
+/* HOME PAGE */
+
 .flex-container{
 	display: flex;
 	justify-content: center;
@@ -63,6 +65,38 @@ header h1{
 	text-align: center;
 	width: 50%;
 }
+
+.user{
+	border-radius: 5px;
+ 	background-color: #f2f2f2;
+  	padding: 25px;
+  	width: 50%
+}
+
+.user h2, p{
+	text-align: center;
+	justify-content: center;
+}
+
+.user input[type=text], select{
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+}
+
+.user input[type=submit]{
+	background-color: red;
+	color: white;
+	padding: 15px 20px;
+	border-radius: 5px;
+	cursor: pointer;
+	border: none;
+	width: 25%;
+}
+
+/**/
 
 .search{
   	justify-content: center;
