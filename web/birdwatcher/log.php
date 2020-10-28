@@ -75,102 +75,87 @@
 		include 'navbar.php';
 	?>
 
-	<div class="log">
-		<h2>Log Bird Sighting</h2>
-		<p>Log your recent bird sighting below:</p>
+	<div class="flex-container">
+		<div class="home">
+			<h2>Log Bird Sighting</h2>
+			<p>Log your recent bird sighting below:</p>
+		</div>
 
-		<form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post">
-			<div class="leftcol">
-				<label for="birdid">Bird Name:</label><br>
-			</div>
-			<div class="rightcol">
-				<select name="birdid" id="birdid">
-					
-					<?php
-					foreach ($db->query('SELECT birdname FROM Bird') as $row)
-					{
-						echo '<option value="' . $row['birdname'] . '">' . $row['birdname'] . '</option>';
-					}
-					?>
-				</select>
-			</div>
+		<div class="user">
+			<form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post">
+				<div class="leftcol">
+					<label for="birdid">Bird Name:</label><br>
+				</div>
+				<div class="rightcol">
+					<select name="birdid" id="birdid">
+						
+						<?php
+						foreach ($db->query('SELECT birdname FROM Bird') as $row)
+						{
+							echo '<option value="' . $row['birdname'] . '">' . $row['birdname'] . '</option>';
+						}
+						?>
+					</select>
+				</div>
 
-			<div class="leftcol">
-				<label for="memberid">Username:</label><br>
-			</div>
-			<div class="rightcol">
-				<input type="text" name="memberid" id="memberid" placeholder="jsmith" required><br>
-			</div>
+				<div class="leftcol">
+					<label for="memberid">Username:</label><br>
+				</div>
+				<div class="rightcol">
+					<input type="text" name="memberid" id="memberid" placeholder="jsmith" required><br>
+				</div>
 
-				<!--
-				<select name="memberid" id="memberid">
-					
-					<?php
-					//foreach ($db->query('SELECT username FROM Member') as $row)
-					{
-						//echo '<option value="' . $row['username'] . '">' . $row['username'] . '</option>';
-					}
-					?>
-				</select>
-			-->
-			
+					<!--
+					<select name="memberid" id="memberid">
+						
+						<?php
+						//foreach ($db->query('SELECT username FROM Member') as $row)
+						{
+							//echo '<option value="' . $row['username'] . '">' . $row['username'] . '</option>';
+						}
+						?>
+					</select>
+				-->
+				
 
-<!--
-			<div class="leftcol">
-				<label for="memberid">Username:</label><br>
-			</div>
-			<div class="rightcol">
-				<input type="text" name="memberid" id="memberid" placeholder="user123"><br>
-			</div>
-		-->
-			
-<!--
-			<div class="leftcol">
-				<label for="birdid">Bird Name:</label><br>
-			</div>
-			<div class="rightcol">
-				<input type="text" name="birdid" id="birdid" placeholder="Blue Jay"><br>
-			</div>
-		-->
-			
+				<div class="leftcol">
+					<label for="city">City:</label><br>
+				</div>
+				<div class="rightcol">
+					<input type="text" name="city" id="city" placeholder="Los Angelos" required><br>
+				</div>
+				
 
-			<div class="leftcol">
-				<label for="city">City:</label><br>
-			</div>
-			<div class="rightcol">
-				<input type="text" name="city" id="city" placeholder="Los Angelos" required><br>
-			</div>
-			
+				<div class="leftcol">
+					<label for="state">State:</label><br>
+				</div>
+				<div class="rightcol">
+					<input type="text" name="state" id="state" placeholder="California" required><br>
+				</div>
+				
 
-			<div class="leftcol">
-				<label for="state">State:</label><br>
-			</div>
-			<div class="rightcol">
-				<input type="text" name="state" id="state" placeholder="California" required><br>
-			</div>
-			
+				<div class="leftcol">
+					<label for="country">Country:</label><br>
+				</div>
+				<div class="rightcol">
+					<input type="text" name="country" id="country" placeholder="United States" required><br>
+				</div>
+				
 
-			<div class="leftcol">
-				<label for="country">Country:</label><br>
-			</div>
-			<div class="rightcol">
-				<input type="text" name="country" id="country" placeholder="United States" required><br>
-			</div>
-			
+				<div class="leftcol">
+					<label for="sighttime">Date:</label><br>
+				</div>
+				<div class="rightcol">
+					<input type="text" name="sighttime" id="sighttime" placeholder="YYYY-MM-DD" required><br>
+				</div>
+				
 
-			<div class="leftcol">
-				<label for="sighttime">Date:</label><br>
-			</div>
-			<div class="rightcol">
-				<input type="text" name="sighttime" id="sighttime" placeholder="YYYY-MM-DD" required><br>
-			</div>
-			
-
-			<div class="rightcol">
-				<input type="submit" name="submit" value="Submit"><br>
-			</div>
-			
-		</form>
+				<div class="rightcol">
+					<input type="submit" name="submit" value="Submit"><br>
+				</div>
+				
+			</form>
+		</div>
 
 			<?php
 				if (isset($_SESSION['errorMessage'])) {
