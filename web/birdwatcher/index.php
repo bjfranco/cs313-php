@@ -88,7 +88,7 @@
 
 				<?php
 					if (isset($_SESSION['message'])) {
-						echo "<p>" . $_SESSION['message'] . "</p>";
+						echo "<p color:red>" . $_SESSION['message'] . "</p>";
 					}
 				?>
 		</div>
