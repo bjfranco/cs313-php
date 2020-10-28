@@ -6,6 +6,9 @@
 	if(isset($_SESSION['errorMessage'])){
     	unset($_SESSION['errorMessage']);
     }
+    if(isset($_SESSION['checkTwo'])){
+    	unset($_SESSION['checkTwo']);
+    }
 
 	// connect to database
 	require 'dbconnect.php';
@@ -39,7 +42,7 @@
 			{
 				if ($rows['username'] == $_POST['memberid']) {
 					$_POST['memberid'] = $rows['memberid'];
-					$checkTwo = 'true';
+					$_SESSION['checkTwo'] = 'true';
 				}
 				else{
 					$checkTwo = 'false';
@@ -47,7 +50,7 @@
 				}
 			}
 		}
-		if ($checkOne == 'true' AND $checkTwo == 'true') {
+		if ($_SESSION['checkTwo'] == 'true') {
 			insertLog($db, $_POST['memberid'], $_POST['birdid'], $_POST['city'], $_POST['state'], $_POST['country'], $_POST['sighttime']);
 			$_SESSION['errorMessage'] = "Log Added";
 		}
