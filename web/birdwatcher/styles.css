@@ -5,6 +5,7 @@
 	overflow: hidden;
 	border-radius: 5px;
 	text-align: center;
+	align-items: center;
 }
 
 .nav li{
