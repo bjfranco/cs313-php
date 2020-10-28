@@ -79,7 +79,7 @@ header h1{
 }
 
 .user input[type=text], select{
-  width: 100%;
+  width: 75%;
   padding: 12px;
   border: 1px solid #ccc;
   border-radius: 4px;
