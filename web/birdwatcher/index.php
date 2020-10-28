@@ -22,14 +22,13 @@
 		  if ($row['username'] == $_POST['username']) {
 		  	$message = "Error: Username Already Taken";
 			//echo "<script type='text/javascript'>alert('$message');</script>";
-			echo $message;
 			$check = 'false';
 		  }
 		}
 		if ($check != 'false') {
 			addUser($db, $_POST['username'], $_POST['firstname'], $_POST['lastname']);
 			$message = "User Added";
-			echo "<script type='text/javascript'>alert('$message');</script>";
+			//echo "<script type='text/javascript'>alert('$message');</script>";
 		}
     }
 
@@ -85,6 +84,12 @@
 				</div>
 
 				<input type="submit" name="submit"><br>
+
+				<?php
+					if (isset($message)) {
+						echo $message;
+					}
+				?>
 			</form>
 		</div>
 	</div>

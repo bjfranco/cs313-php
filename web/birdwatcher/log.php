@@ -107,7 +107,7 @@
 				<label for="city">City:</label><br>
 			</div>
 			<div class="rightcol">
-				<input type="text" name="city" id="city" placeholder="Los Angelos"><br>
+				<input type="text" name="city" id="city" placeholder="Los Angelos" required><br>
 			</div>
 			
 
@@ -115,7 +115,7 @@
 				<label for="state">State:</label><br>
 			</div>
 			<div class="rightcol">
-				<input type="text" name="state" id="state" placeholder="California"><br>
+				<input type="text" name="state" id="state" placeholder="California" required><br>
 			</div>
 			
 
@@ -123,7 +123,7 @@
 				<label for="country">Country:</label><br>
 			</div>
 			<div class="rightcol">
-				<input type="text" name="country" id="country" placeholder="United States"><br>
+				<input type="text" name="country" id="country" placeholder="United States" required><br>
 			</div>
 			
 
@@ -131,7 +131,7 @@
 				<label for="sighttime">Date:</label><br>
 			</div>
 			<div class="rightcol">
-				<input type="text" name="sighttime" id="sighttime" placeholder="YYYY-MM-DD"><br>
+				<input type="text" name="sighttime" id="sighttime" placeholder="YYYY-MM-DD" required><br>
 			</div>
 			
 
