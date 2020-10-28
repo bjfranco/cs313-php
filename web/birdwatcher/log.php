@@ -79,7 +79,7 @@
 		<div class="home">
 			<h2>Log Bird Sighting</h2>
 			<p>Log your recent bird sightings here:</p>
-			<img src="bird.jpeg">
+			<img src="bird.jpg">
 		</div>
 
 		<div class="user">
