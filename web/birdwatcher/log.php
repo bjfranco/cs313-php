@@ -2,6 +2,11 @@
 	// start the session
 	session_start();
 
+	// unset session variable
+	if(isset($_SESSION['errorMessage'])){
+    	unset($_SESSION['errorMessage']);
+    }
+
 	// connect to database
 	require 'dbconnect.php';
 
