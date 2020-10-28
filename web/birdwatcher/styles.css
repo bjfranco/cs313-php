@@ -13,6 +13,8 @@
 	float: right;
 	list-style-type: none;
 	display: inline;
+		line-height: 200px;
+	height: 200px;
 }
 
 .nav h1{
@@ -22,6 +24,8 @@
 	text-shadow: 1px 1px 1px black;
 	display: inline-block;
 	float: left;
+		line-height: 200px;
+	height: 200px;
 }
 
 .nav a{
@@ -33,6 +37,8 @@
 	font-size: 35px;
 	font-family: 'Dancing Script', cursive;
 	text-shadow: 1px 1px 1px black;
+		line-height: 200px;
+	height: 200px;
 }
 
 .nav li a:hover{
