@@ -35,6 +35,9 @@
     // run our functions to add a user
     if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     	checkUser($db, $_POST['username']);
+    				if (isset($message)) {
+						echo "<p>" . $message . "</p>";
+					}
     }
 ?>
 <!DOCTYPE html>
