@@ -59,7 +59,7 @@
 		</div>
 
 		<div class="user">
-			<h3>Create User Profle:</h3>
+			<h3>Create User Profile</h3>
 			<form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post">
 				<label for="username">Username:</label><br>
 				<input type="text" name="username" id="username" placeholder="user123"><br>
