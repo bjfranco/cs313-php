@@ -20,14 +20,14 @@
 		foreach ($db->query('SELECT username FROM Member') as $row)
 		{
 		  if ($row['username'] == $_POST['username']) {
-		  	$message = "Error: Username Already Taken";
+		  	$_SESSION['message'] = "Error: Username Already Taken";
 			//echo "<script type='text/javascript'>alert('$message');</script>";
 			$check = 'false';
 		  }
 		}
 		if ($check != 'false') {
 			addUser($db, $_POST['username'], $_POST['firstname'], $_POST['lastname']);
-			$message = "User Added";
+			$_SESSION['message'] = "User Added";
 			//echo "<script type='text/javascript'>alert('$message');</script>";
 		}
     }
@@ -35,9 +35,6 @@
     // run our functions to add a user
     if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     	checkUser($db, $_POST['username']);
-    				if (isset($message)) {
-						echo "<p>" . $message . "</p>";
-					}
     }
 ?>
 <!DOCTYPE html>
@@ -91,7 +88,7 @@
 
 				<?php
 					if (isset($message)) {
-						echo "<p>" . $message . "</p>";
+						echo "<p>" . $_SESSION['message'] . "</p>";
 					}
 				?>
 		</div>
