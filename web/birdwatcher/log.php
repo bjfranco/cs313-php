@@ -26,6 +26,9 @@
 				if ($rows['username'] == $_POST['memberid']) {
 					$_POST['memberid'] = $rows['memberid'];
 				}
+				else{
+					$_SESSION['errorMessage'] = "ERROR: ENTER A VALID USERNAME!";
+				}
 			}
 		}
     	insertLog($db, $_POST['memberid'], $_POST['birdid'], $_POST['city'], $_POST['state'], $_POST['country'], $_POST['sighttime']);
@@ -73,16 +76,21 @@
 				<label for="memberid">Username:</label><br>
 			</div>
 			<div class="rightcol">
+				<input type="text" name="memberid" id="memberid" placeholder="jsmith" required><br>
+			</div>
+
+				<!--
 				<select name="memberid" id="memberid">
 					
 					<?php
-					foreach ($db->query('SELECT username FROM Member') as $row)
+					//foreach ($db->query('SELECT username FROM Member') as $row)
 					{
-						echo '<option value="' . $row['username'] . '">' . $row['username'] . '</option>';
+						//echo '<option value="' . $row['username'] . '">' . $row['username'] . '</option>';
 					}
 					?>
 				</select>
-			</div>
+			-->
+			
 
 <!--
 			<div class="leftcol">
@@ -140,6 +148,12 @@
 			</div>
 			
 		</form>
+
+			<?php
+				if (isset($_SESSION['errorMessage'])) {
+					echo "<p style='color:black; font-size:20px; font-family:'Work Sans', sans-serif;'>" . $_SESSION['errorMessage'] . "</p>";
+				}
+			?>
 	</div>
 
 </body>
