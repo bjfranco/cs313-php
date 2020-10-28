@@ -67,7 +67,7 @@
 					<label for="username">Username:</label><br>
 				</div>
 				<div class="rightcol">
-					<input type="text" name="username" id="username" placeholder="user123"><br>
+					<input type="text" name="username" id="username" placeholder="user123" required><br>
 				</div>
 
 				<div class="leftcol">
