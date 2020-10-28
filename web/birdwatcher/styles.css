@@ -95,8 +95,7 @@ header h1{
 	cursor: pointer;
 	border: none;
 	width: 25%;
-	align-items: center;
-	align-content: center;
+	justify-content: center;
 }
 
 .user h3{
