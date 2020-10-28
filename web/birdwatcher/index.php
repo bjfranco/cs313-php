@@ -51,26 +51,28 @@
 		include 'navbar.php';
 	?>
 
-	<div class="home">
-		<h2>Welcome to Bird Watcher!</h2>
-		<p>Select the "Search" tab to search for a bird sighting.</p>
-		<p>Select the "Log" tab to log a new bird sighting.</p>
-	</div>
+	<div class="flex-container">
+		<div class="home">
+			<h2>Welcome to Bird Watcher!</h2>
+			<p>Select the "Search" tab to search for a bird sighting.</p>
+			<p>Select the "Log" tab to log a new bird sighting.</p>
+		</div>
 
-	<div class="log">
-		<h3>Create User Profle:</h3>
-		<form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post">
-			<label for="username">Username:</label><br>
-			<input type="text" name="username" id="username" placeholder="user123"><br>
+		<div class="log">
+			<h3>Create User Profle:</h3>
+			<form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post">
+				<label for="username">Username:</label><br>
+				<input type="text" name="username" id="username" placeholder="user123"><br>
 
-			<label for="firstname">First Name:</label><br>
-			<input type="text" name="firstname" id="firstname" placeholder="John"><br>
+				<label for="firstname">First Name:</label><br>
+				<input type="text" name="firstname" id="firstname" placeholder="John"><br>
 
-			<label for="lastname">Last Name:</label><br>
-			<input type="text" name="lastname" id="lastname" placeholder="Smith"><br><br><br>
+				<label for="lastname">Last Name:</label><br>
+				<input type="text" name="lastname" id="lastname" placeholder="Smith"><br><br><br>
 
-			<input type="submit" name="submit"><br>
-		</form>
+				<input type="submit" name="submit"><br>
+			</form>
+		</div>
 	</div>
 
 </body>
