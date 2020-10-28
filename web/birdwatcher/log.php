@@ -78,7 +78,8 @@
 	<div class="flex-container">
 		<div class="home">
 			<h2>Log Bird Sighting</h2>
-			<p>Log your recent bird sighting below:</p>
+			<p>Log your recent bird sightings here:</p>
+			<img src="bird.jpeg">
 		</div>
 
 		<div class="user">
@@ -153,15 +154,15 @@
 				<div class="rightcol">
 					<input type="submit" name="submit" value="Submit"><br>
 				</div>
-				
 			</form>
-		</div>
-
 			<?php
 				if (isset($_SESSION['errorMessage'])) {
 					echo "<p style='color:black; font-size:20px; font-family:'Work Sans', sans-serif;'>" . $_SESSION['errorMessage'] . "</p>";
 				}
 			?>
+		</div>
+
+
 	</div>
 
 </body>
