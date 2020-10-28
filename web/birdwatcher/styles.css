@@ -68,7 +68,8 @@ header h1{
 }
 
 .home img{
-	width: auto;
+	max-width: 75%;
+	height: auto;	
 }
 
 .user{
