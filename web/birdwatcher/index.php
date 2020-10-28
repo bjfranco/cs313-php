@@ -84,13 +84,13 @@
 				</div>
 
 				<input type="submit" name="submit"><br>
+			</form>
 
 				<?php
 					if (isset($message)) {
-						echo $message;
+						echo "<p>" . $message . "</p>";
 					}
 				?>
-			</form>
 		</div>
 	</div>
 
