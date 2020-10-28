@@ -21,7 +21,8 @@
 		{
 		  if ($row['username'] == $_POST['username']) {
 		  	$message = "Error: Username Already Taken";
-			echo "<script type='text/javascript'>alert('$message');</script>";
+			//echo "<script type='text/javascript'>alert('$message');</script>";
+			echo $message;
 			$check = 'false';
 		  }
 		}
