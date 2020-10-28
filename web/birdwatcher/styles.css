@@ -8,7 +8,7 @@
 }
 
 .nav li{
-	float: right;
+	/*float: right;*/
 	list-style-type: none;
 	display: inline;
 }
