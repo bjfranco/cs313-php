@@ -28,6 +28,7 @@
 				}
 				else{
 					$_SESSION['errorMessage'] = "ERROR: ENTER A VALID USERNAME!";
+					die();
 				}
 			}
 		}
