@@ -9,6 +9,7 @@
 .nav li{
 	float: left;
 	list-style-type: none;
+	display: inline;
 }
 
 .nav h1{
@@ -16,6 +17,7 @@
 	font-size: 50px;
 	font-family: 'Dancing Script', cursive;
 	text-shadow: 1px 1px 1px black;
+	display: inline-block;
 }
 
 .nav a{
