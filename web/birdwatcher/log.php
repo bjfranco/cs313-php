@@ -11,12 +11,21 @@
 		$statement->execute(array(':memberid' => $memberid, ':birdid' => $birdid, ':city' => $city, ':state' => $state, ':country' => $country, ':sighttime' => $sighttime));
     }
 
+    function checkValues($db, $memberid, $birdid, $city, $state, $country, $sighttime)
+    {
+
+    }
+
     if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     	if (isset($_POST['birdid'])) {
 			foreach ($db->query('SELECT birdid, birdname FROM Bird') as $row)
 			{
 				if ($row['birdname'] == $_POST['birdid']) {
 					$_POST['birdid'] = $row['birdid'];
+					$checkOne = 'true';
+				}
+				else{
+					$_SESSION['errorMessage'] = "ERROR: Bird Not Found";
 				}
 			}
 		}
@@ -25,17 +34,22 @@
 			{
 				if ($rows['username'] == $_POST['memberid']) {
 					$_POST['memberid'] = $rows['memberid'];
+					$checkTwo = 'true';
 				}
 				else{
-					$_SESSION['errorMessage'] = "ERROR: ENTER A VALID USERNAME!";
-					die();
+					$checkTwo = 'false';
+					$_SESSION['errorMessage'] = "ERROR: Enter A Valid Username";
 				}
 			}
 		}
-    	insertLog($db, $_POST['memberid'], $_POST['birdid'], $_POST['city'], $_POST['state'], $_POST['country'], $_POST['sighttime']);
+		if ($checkOne == 'true' AND $checkTwo == 'true') {
+			insertLog($db, $_POST['memberid'], $_POST['birdid'], $_POST['city'], $_POST['state'], $_POST['country'], $_POST['sighttime']);
+			$_SESSION['errorMessage'] = "Log Added";
+		}
+    	
 
-    	$message = "Log Added";
-		echo "<script type='text/javascript'>alert('$message');</script>";
+    	//$message = "Log Added";
+		//echo "<script type='text/javascript'>alert('$message');</script>";
     }
 
 ?>
