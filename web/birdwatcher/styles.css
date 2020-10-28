@@ -8,7 +8,7 @@
 }
 
 .nav li{
-	/*float: right;*/
+	float: right;
 	list-style-type: none;
 	display: inline;
 }
@@ -19,6 +19,7 @@
 	font-family: 'Dancing Script', cursive;
 	text-shadow: 1px 1px 1px black;
 	display: inline-block;
+	float: left;
 }
 
 .nav a{
