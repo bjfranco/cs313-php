@@ -5,6 +5,8 @@
 	overflow: hidden;
 	border-radius: 5px;
 	text-align: center;
+	line-height: 200px;
+	height: 200px;
 }
 
 .nav li{
