@@ -87,7 +87,7 @@
 			</form>
 
 				<?php
-					if (isset($message)) {
+					if (isset($_SESSION['message'])) {
 						echo "<p>" . $_SESSION['message'] . "</p>";
 					}
 				?>
