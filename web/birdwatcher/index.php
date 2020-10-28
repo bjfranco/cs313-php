@@ -2,6 +2,11 @@
 	// start the session
 	session_start();
 
+	// unset session variable
+	    if(isset($_SESSION['message'])){
+        	unset($_SESSION['message']);
+     }
+
 	// connect to database
 	require 'dbconnect.php';
 
