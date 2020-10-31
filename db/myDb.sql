@@ -1,10 +1,4 @@
 CREATE TABLE Member (
-	MemberId serial NOT NULL PRIMARY KEY,
-	FirstName varchar(80) NOT NULL,
-	LastName varchar(80) NOT NULL
-);
-
-CREATE TABLE Member (
 	MemberID serial NOT NULL PRIMARY KEY,
 	UserName varchar(80) UNIQUE NOT NULL,
 	FirstName varchar(80) NOT NULL,
@@ -15,9 +9,6 @@ CREATE TABLE Bird (
 	BirdId serial NOT NULL PRIMARY KEY,
 	BirdName varchar(80) UNIQUE NOT NULL
 );
-
-ALTER TABLE Bird
-ADD UNIQUE (BirdName);
 
 CREATE TABLE Sighting (
 	SightingId serial NOT NULL PRIMARY KEY,
