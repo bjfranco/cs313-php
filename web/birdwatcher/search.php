@@ -33,7 +33,7 @@
 				}
 				?>
 
-				<br><br><br>
+				<br>
 				<input type="submit" name="submit" value="Search">
 
 			</select>

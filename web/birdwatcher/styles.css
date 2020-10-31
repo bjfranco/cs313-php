@@ -123,6 +123,18 @@ header h1{
 	width: 50%;
 }
 
+.search input[type=submit]{
+	background-color: red;
+	color: white;
+	padding: 15px 20px;
+	border-radius: 5px;
+	cursor: pointer;
+	border: none;
+	width: 25%;
+	display: block;
+	margin: 0 auto;
+}
+
 .table{
   	justify-content: center;
   	align-items: center;
