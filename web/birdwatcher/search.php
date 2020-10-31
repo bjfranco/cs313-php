@@ -38,22 +38,10 @@
 
 			</select>
 
-			<!--
-			<label for="bird">Bird Name:</label><br>
-			<input type="text" name="bird" id="bird"><br><br>
-			<input type="submit" name="submit" value="Search">
-			-->
-
 		</form><br>
 
 		<?php
 		    $bird = $_POST['bird'];
-		    /*
-		    $city = $_POST['city'];
-		    $state = $_POST['state'];
-		    $country = $_POST['country'];
-		    */
-
 
 		    if (!empty($bird)) {
 		    	echo '<div class="table"><h3>' . $bird . '</h3>';
