@@ -141,12 +141,12 @@ header h1{
 }
 
 .search th{
-	background-color: #01E5A7;
+	background-color: #333;
 	color: white;
 }
 
-.search th:hover{
-	background-color: #333;
+.search tr:hover{
+	background-color: #01E5A7;
 	color: white;
 }
 
