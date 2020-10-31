@@ -117,13 +117,13 @@ header h1{
   	justify-content: center;
   	align-items: center;
 	text-align: center;
+	width: 50%;
 }
 
 .table{
   	justify-content: center;
   	align-items: center;
 	text-align: center;
-	width: 50%
 }
 
 .table table{
