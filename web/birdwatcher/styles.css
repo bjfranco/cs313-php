@@ -136,7 +136,18 @@ header h1{
 }
 
 .search th, td{
+	padding: 15px;
 	border-bottom: 1px solid #ddd;
+}
+
+.search th{
+	background-color: #01E5A7;
+	color: white;
+}
+
+.search th:hover{
+	background-color: #333;
+	color: white;
 }
 
 
